@@ -5,71 +5,220 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="./sofa.css">
+
     <style>
-        #topcontainer{
-            border: 2px solid black;
-            display: flex;
+         body{
+             font-family: Arial, Helvetica, sans-serif;
+
         }
 
-        #leftdiv{
-            border: 2px solid red;
-            width: 600px;
+        #top{
+            display: flex;
+            /* border: 2px solid black; */
+            width: 92%;
+            margin: auto;
+        }
+
+        #topLeft>h1{
+            font-size: 36px;
+            margin-bottom: 50px;
+        }
+        #background{
+            background-image: url(//ak1.ostkcdn.com/img/mxc/09142020_FALLEGREEN_057z_SofasandCouches_AMOD.jpg?&impolicy=custom);
+            width: 80%;
+            height: 400px;
+            background-repeat: no-repeat;
+            
+            margin: 60px;
         }
 
         #second{
-            border: 2px solid black;
-            height: 200px;
+            /* border: 2px solid black; */
+            height: 400px;
+            width: 92%;
+            margin: auto;
+        }
+
+        #second>h2{
+            text-align: center;
         }
 
         #third{
-            border: 2px solid black;
-            height: 200px;
-
+            /* border: 2px solid black; */
+            height: 400px;
+            width: 92%;
+            margin: auto;
         }
 
-        #bottom{
-            border: 2px solid black;
-            height: 800px ;
+        #third>h2{
+            text-align: center;
+        }
+
+       #lastLeft>select{
+            width: 300px;
+            height: 50px;
+            margin-left: 50px;
+            font-weight: bold;
+            font-size: 18px;
+            border-left:0px;
+            border-right:0px;
+            outline:0px;
+        }
+
+        option{
+            font-size: 20px;
+        }
+        #last{
             display: flex;
+            margin-top:100px ;
         }
+       
 
-        #righttop{
-            background-image: url(//ak1.ostkcdn.com/img/mxc/09142020_FALLEGREEN_057z_SofasandCouches_AMOD.jpg?imwidth=900&impolicy=custom);
-            width: 90%;
-            height: 300px;
-            background-repeat: no-repeat;
-           
-        }
-
-        #bottomleft{
-            width: 500px;
-        }
-
-        #bottomright{
-            width: 100%;
-            border: 2px solid black;
+        #lastRight{
+            width: 74%;
+            margin-left: 50px;
+            float: right;
             display: grid;
             grid-template-columns: repeat(3,1fr);
-           
-            gap: 10px;
+            gap: 20px;
         }
 
-        #bottominner{
-            border: 2px solid black;
-            width: 400px;
-            height: 580px;
-            line-height: 19px;
+        #sort{
+            display: flex;
+            float: right;
+            margin-right: 60px;
+        }
 
+        #sort>select{
+            width: 200px;
+            height: 40px;
+            margin-top: 10px;
+        }
+        #byType{
+            display: flex;
+            justify-content: space-around;
+        }
+
+        #secDivInner{
+            width: 218px;
+            
+            
             
         }
 
-        #bottominner>img{
+        #secDivInner>img{
             width: 100%;
         }
+
+        #byStyle{
+            display: flex;
+            justify-content: space-around;
+
+        }
+       
     </style>
+    
 </head>
 <body>
     <div id="container"></div>
+    <div id="top">
+        <div id="topLeft">
+            <h1>Sofas & Couches</h1>
+            <p>Sofa</p>
+            <p>Sectional</p>
+            <p>Loveseats</p>
+            <p>Sleeper Sofas</p>
+            <p>Leather Sofas</p>
+            <p>Recliner Sofas</p>
+            <p>Shops all Sofas & Couches on Sale</p>
+        </div>
+        <div id="background"></div>
+     </div>
+     <div id="second">
+        <h2>Shop by Type</h2>
+        <div id="byType"></div>
+    </div>
+    <div id="third">
+        <h2>Shop by Style</h2>
+        <div id="byStyle"></div>
+    </div>
+
+    <div id="sort">
+        <h3>Sort By :</h3>
+        <select name="" id="">
+            <option value="">By Selling</option>
+            <option value="">Price Low-High</option>
+            <option value="">Price High-Low</option>
+            <option value="">Rating</option>
+        </select>
+    </div>
+
+    <div id="last">
+        <div id="lastLeft">
+            <select>
+                <option> Type</option>
+                <option>Sofa</option>
+                <option value="">Sleeper sofa</option>
+                <option value="">Recliner</option>
+                <option value="">Sets</option>
+                <option value="">Settee</option>
+            </select>
+            <br>
+            <select name="" id="">
+                <option value="">Price</option>
+             </select>
+             <br>
+            <select name="" id="">
+                <option value="">Colors</option>
+            </select>
+            <br>
+            <select name="" id="">
+                <option value="">Upholstery Materials</option>
+            </select>
+            <br>
+            <select name="" id="">
+                <option value="">Styles</option>
+            </select>
+            <br>
+            <select name="" id="">
+                <option value="">Arm Styles</option>
+            </select>
+            <br>
+            <select name="" id="">
+                <option value="">Back Styles</option>
+            </select>
+            <br>
+            <select name="" id="">
+                <option value="">Bands</option>
+            </select>
+            <br>
+            <select name="" id="">
+                <option value="">Prints</option>
+            </select>
+            <br>
+            <select name="" id="">
+                <option value="">Assembly</option>
+            </select>
+            <br>
+            <select name="" id="">
+                <option value="">Sales & Promotions</option>
+            </select>
+            <br>
+            <select name="" id="">
+                <option value="">Product Features</option>
+            </select>
+            <br>
+            <select name="" id="">
+                <option value="">Customer Ratings</option>
+            </select>
+            <br>
+            <select name="" id="">
+                <option value="">Availability</option>
+            </select>
+        </div>
+        <div id="lastRight"></div>
+    </div>
     
 </body>
 </html>
@@ -86,123 +235,127 @@ let main=data;
 
 console.log(data);
 
-let container=document.getElementById("container")
+// let container=document.getElementById("container")
+
+let container=document.getElementById("lastRight")
 
 const appenddata=(main)=>{
 
     
-        let topdiv=document.createElement("div")
-        topdiv.setAttribute("id","topcontainer")
+//         let topdiv=document.createElement("div")
+//         topdiv.setAttribute("id","topcontainer")
         
-        let div1=document.createElement("div")
-        div1.setAttribute("id","leftdiv")
+//         let div1=document.createElement("div")
+//         div1.setAttribute("id","leftdiv")
 
-        let p1=document.createElement("p")
-        p1.innerText="Sofas";
+//         let p1=document.createElement("p")
+//         p1.innerText="Sofas";
 
-        let p2=document.createElement("p")
-        p2.innerText="Sectionals";
+//         let p2=document.createElement("p")
+//         p2.innerText="Sectionals";
 
-        let p3=document.createElement("p")
-        p3.innerText="Loveseats";
+//         let p3=document.createElement("p")
+//         p3.innerText="Loveseats";
 
-        let p4=document.createElement("p")
-        p4.innerText="Sleeper Sofas";
+//         let p4=document.createElement("p")
+//         p4.innerText="Sleeper Sofas";
 
-        let p5=document.createElement("p")
-        p5.innerText="Leather Sofas";
+//         let p5=document.createElement("p")
+//         p5.innerText="Leather Sofas";
 
-        let p6=document.createElement("p")
-        p6.innerText="Recliner Sofas";
+//         let p6=document.createElement("p")
+//         p6.innerText="Recliner Sofas";
 
-        let p7=document.createElement("p")
-        p7.innerText="Shop all Sofas & Couches";
+//         let p7=document.createElement("p")
+//         p7.innerText="Shop all Sofas & Couches";
 
-        let div2=document.createElement("div")
-        div2.setAttribute("id","righttop")
+//         let div2=document.createElement("div")
+//         div2.setAttribute("id","righttop")
 
-        let seconddiv=document.createElement("div")
-        seconddiv.setAttribute("id","second")
+//         let seconddiv=document.createElement("div")
+//         seconddiv.setAttribute("id","second")
 
-        let h3=document.createElement("h3")
-        h3.innerText="Shop by Type";
+//         let h3=document.createElement("h3")
+//         h3.innerText="Shop by Type";
 
  
-        // s2data.forEach((e)=>{
+//         // s2data.forEach((e)=>{
 
-        //     let cdiv=document.createElement("div")
+//         //     let cdiv=document.createElement("div")
 
-        //     let img=document.createElement("img");
+//         //     let img=document.createElement("img");
             
-        //     let name1=document.createElement("h2")
+//         //     let name1=document.createElement("h2")
 
-        //     cdiv.append(img,name1)
-        // })
+//         //     cdiv.append(img,name1)
+//         // })
 
-        let thirddiv=document.createElement("div")
-        thirddiv.setAttribute("id","third")
+//         let thirddiv=document.createElement("div")
+//         thirddiv.setAttribute("id","third")
 
-        let h4=document.createElement("h3")
-        h4.innerText="Shop by Style";
-
-
-        let bottomcontainer=document.createElement("div")
-        bottomcontainer.setAttribute("id","bottom")
-
-        let leftdiv=document.createElement("div")
-        leftdiv.setAttribute("id","bottomleft")
-
-        let type=document.createElement("h3")
-        type.innerText="Type";
-
-        let price=document.createElement("h3")
-        price.innerText="Price";
-
-        let colors=document.createElement("h3")
-        colors.innerText="Colors";
-
-        let Materials=document.createElement("h3")
-        Materials.innerText="Upholstery Materials"
+//         let h4=document.createElement("h3")
+//         h4.innerText="Shop by Style";
 
 
-        let styles=document.createElement("h3")
-        styles.innerText="Styles";
+//         let bottomcontainer=document.createElement("div")
+//         bottomcontainer.setAttribute("id","bottom")
 
-        let arm=document.createElement("h3")
-        arm.innerText="Arm Styles";
+//         let leftdiv=document.createElement("div")
+//         leftdiv.setAttribute("id","bottomleft")
 
-        let back=document.createElement("h3")
-        back.innerText="BackStyles";
+//         let type=document.createElement("h3")
+//         type.innerText="Type";
 
-        let brands=document.createElement("h3")
-        brands.innerText="Brands";
+//         let price=document.createElement("h3")
+//         price.innerText="Price";
 
-        let prints=document.createElement("h3")
-        prints.innerText="Prints";
+//         let colors=document.createElement("h3")
+//         colors.innerText="Colors";
 
-        let assembly=document.createElement("h3")
-        assembly.innerText="Assembly";
+//         let Materials=document.createElement("h3")
+//         Materials.innerText="Upholstery Materials"
 
-        let sales=document.createElement("h3")
-        sales.innerText="Sales & Promotions";
 
-        let products=document.createElement("h3")
-        products.innerText="Product Features";
+//         let styles=document.createElement("h3")
+//         styles.innerText="Styles";
 
-        let customer=document.createElement("h3")
-        customer.innerText="Customer Rating";
+//         let arm=document.createElement("h3")
+//         arm.innerText="Arm Styles";
 
-        let availability=document.createElement("h3")
-        availability.innerText="Availability";
+//         let back=document.createElement("h3")
+//         back.innerText="BackStyles";
 
-        leftdiv.append(type,price,colors,Materials,styles,arm,back,brands,prints,assembly,sales,products,customer,availability)
+//         let brands=document.createElement("h3")
+//         brands.innerText="Brands";
+
+//         let prints=document.createElement("h3")
+//         prints.innerText="Prints";
+
+//         let assembly=document.createElement("h3")
+//         assembly.innerText="Assembly";
+
+//         let sales=document.createElement("h3")
+//         sales.innerText="Sales & Promotions";
+
+//         let products=document.createElement("h3")
+//         products.innerText="Product Features";
+
+//         let customer=document.createElement("h3")
+//         customer.innerText="Customer Rating";
+
+//         let availability=document.createElement("h3")
+//         availability.innerText="Availability";
+
+//         leftdiv.append(type,price,colors,Materials,styles,arm,back,brands,prints,assembly,sales,products,customer,availability)
         
-        let rightdiv=document.createElement("div")
-        rightdiv.setAttribute("id","bottomright")
+//         let rightdiv=document.createElement("div")
+//         rightdiv.setAttribute("id","bottomright")
 
         
 
         main.forEach((e)=>{
+
+          
 
             let innerdiv=document.createElement("div");
             innerdiv.setAttribute("id", "bottominner")
@@ -213,23 +366,25 @@ const appenddata=(main)=>{
             let Price=document.createElement("h2")
             Price.innerText=e.price;
 
-            let rating=document.createElement("h2")
+            let rating=document.createElement("h4")
             rating.innerText=e.rating;
 
             let name=document.createElement("p")
             name.innerText=e.name;
 
             innerdiv.append(img,Price,rating,name)
+            
 
-            rightdiv.append(innerdiv)
+            // rightdiv.append(innerdiv)
+            container.append(innerdiv)
 
              innerdiv.addEventListener("click",()=>{
-                console.log(e)
+                // console.log(e)
                 let dataarray=[];
 
                 dataarray.push(e);
 
-                localStorage.setItem("cart",JSON.stringify(dataarray))
+                localStorage.setItem("product",JSON.stringify(dataarray))
 
                 // window.location.href=""
 
@@ -245,19 +400,20 @@ const appenddata=(main)=>{
         
         
         
-        thirddiv.append(h4)
+//         thirddiv.append(h4)
 
-        seconddiv.append(h3);
+//         seconddiv.append(h3);
 
-        div1.append(p1,p2,p3,p4,p5,p6,p7)
+//         div1.append(p1,p2,p3,p4,p5,p6,p7)
 
         
 
-        topdiv.append(div1,div2)
+//         topdiv.append(div1,div2)
 
-        bottomcontainer.append(leftdiv,rightdiv)
+//         bottomcontainer.append(leftdiv,rightdiv)
 
-        container.append(topdiv,seconddiv,thirddiv,bottomcontainer)
+        // container.append(topdiv,seconddiv,thirddiv,bottomcontainer)
+
 
        
 
@@ -267,7 +423,7 @@ const appenddata=(main)=>{
 
 
 
-
+appenddata(main);
 
 let array=[];
 
@@ -476,8 +632,124 @@ let furnituredata=[
 
 localStorage.setItem("furniture",JSON.stringify(furnituredata))
 
-appenddata(main);
+// appenddata(main);
 
+
+
+
+
+
+let secondData=[
+    {
+        "name" : "Futzca Modern L-shaped Compact Convertible Sectional Sofa w/ Reversible Chaise",
+        "category" : "Sofa",
+        "price" : "41500",
+        "rating": "4",
+        "imgSrc" : "https://ak1.ostkcdn.com/images/products/is/images/direct/47c9ae93df558cc6a7214693e20c3b81a9dd4523/Futzca-Convertible-Sectional-Sofa-Couch-with-Reversible-Chaise%2C-Modern-Linen-Fabric-L-Shaped-Couch-for-Small-Space.jpg?imwidth=480&impolicy=medium"
+    },
+    {
+        "name" : "Rosevera Bjorn Chesterfield Settee",
+        "category" : "Sleeper Sofa",
+        "price" : "31000",
+        "rating": "5",
+        "imgSrc" : "https://ak1.ostkcdn.com/images/products/is/images/direct/696a26f965a1db3bf2c6b1db928a2931f0ad78d4/Rosevera-Bjorn-Chesterfield-Settee.jpg?imwidth=480&impolicy=medium"
+    },
+    {
+        "name" : "Morden Style Sofa Set Couch Furniture Upholstered Armchair, Loveseat and Three Seat Sofa for Home or Office (1+2+3-Seat)",
+        "category" : "Recliner Sofa",
+        "price" : "288099",
+        "rating": "4",
+        "imgSrc" : "https://ak1.ostkcdn.com/images/products/is/images/direct/e0d8c0749c643ad8580f8257c06ab5d75d552c76/Morden-Style-Sofa-Set-Couch-Furniture-Upholstered-Armchair%2C-Loveseat-and-Three-Seat-Sofa-for-Home-or-Office-%281%2B2%2B3-Seat%29.jpg?imwidth=480&impolicy=medium"
+    },
+    {
+        "name" : "90 L L-Shaped Reversible Pull out Sleeper,Sectional Storage Sofa Bed",
+        "category" : "Sofa Sets",
+        "price" : "170050",
+        "rating": "5",
+        "imgSrc" : "https://ak1.ostkcdn.com/images/products/is/images/direct/ce37b3a8bc3ae81222c1edbf7b4e9ae9ede1332e/90%22-L-L-Shaped-Reversible-Pull-out-Sleeper%2CSectional-Storage-Sofa-Bed.jpg?imwidth=480&impolicy=medium"
+    },
+    {
+        "name" : "90 L L-Shaped Reversible Pull out Sleeper,Sectional Storage Sofa Bed",
+        "category" : "Sectionals",
+        "price" : "170050",
+        "rating": "5",
+        "imgSrc" : "https://ak1.ostkcdn.com/images/products/is/images/direct/ce37b3a8bc3ae81222c1edbf7b4e9ae9ede1332e/90%22-L-L-Shaped-Reversible-Pull-out-Sleeper%2CSectional-Storage-Sofa-Bed.jpg?imwidth=480&impolicy=medium"
+    },
+    {
+        "name" : "90 L L-Shaped Reversible Pull out Sleeper,Sectional Storage Sofa Bed",
+        "category" : "Loveseats",
+        "price" : "170050",
+        "rating": "5",
+        "imgSrc" : "https://ak1.ostkcdn.com/images/products/is/images/direct/ce37b3a8bc3ae81222c1edbf7b4e9ae9ede1332e/90%22-L-L-Shaped-Reversible-Pull-out-Sleeper%2CSectional-Storage-Sofa-Bed.jpg?imwidth=480&impolicy=medium"
+    }
+]
+
+localStorage.setItem("secondData",JSON.stringify(secondData))
+
+let secData=JSON.parse(localStorage.getItem("secondData"))
+
+let byType=document.getElementById("byType")
+
+let bySype=document.getElementById("bySype")
+
+const secondShow=(data)=>{
+
+    data.forEach((e)=>{
+
+        let div=document.createElement("div")
+        div.setAttribute("id","secDivInner")
+
+        let img=document.createElement("img")
+        img.src=e.imgSrc;
+
+        let name=document.createElement("h3")
+        name.innerText=e.category;
+
+        div.append(img,name)
+
+        byType.append(div)
+
+       
+
+
+
+
+    })
+
+}
+
+secondShow(secData)
+
+
+//for third data
+
+const thirdShow=(data)=>{
+
+data.forEach((e)=>{
+
+    let div=document.createElement("div")
+    div.setAttribute("id","secDivInner")
+
+    let img=document.createElement("img")
+    img.src=e.imgSrc;
+
+    let name=document.createElement("h3")
+    name.innerText=e.category;
+
+    div.append(img,name)
+
+    byStyle.append(div)
+
+   
+
+
+
+
+})
+
+}
+
+thirdShow(secData)
     
 </script>
 

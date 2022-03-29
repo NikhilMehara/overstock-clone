@@ -1,0 +1,61 @@
+#topcontainer{
+    border: 2px solid black;
+    display: flex;
+}
+
+#leftdiv{
+    border: 2px solid red;
+    width: 600px;
+}
+
+/* #second{
+    border: 2px solid black;
+    height: 200px;
+} */
+
+/* #third{
+    border: 2px solid black;
+    height: 400px;
+
+} */
+
+#bottom{
+    border: 2px solid black;
+    height: 800px ;
+    display: flex;
+}
+
+#righttop{
+    background-image: url(//ak1.ostkcdn.com/img/mxc/09142020_FALLEGREEN_057z_SofasandCouches_AMOD.jpg?imwidth=900&impolicy=custom);
+    width: 90%;
+    height: 300px;
+    background-repeat: no-repeat;
+   
+}
+
+#bottomleft{
+    width: 500px;
+}
+
+#bottomright{
+    width: 100%;
+    /* border: 2px solid black; */
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+   
+    gap: 0px;
+}
+
+#bottominner{
+    /* border: 2px solid black; */
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+    width: 390px;
+    height: 550px;
+    line-height: 19px;
+
+    
+}
+
+#bottominner>img{
+    width: 100%;
+}
