@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       #cart{
+           display: flex;
+           justify-content: space-around;
+       } 
+       #cartItems{
+           display: flex;
+           justify-content: center;
+       }
+    </style>
+</head>
+<body>
+    <div id="cart">
+        <div id="cartItems">
+            <div id="img">Image</div>
+            <div id="descriptions">
+                <div><h4>Item Name</h4></div>
+                <div><b>Features</b></div>
+                <div><h4>Price</h4></div>
+                <div><b>quantity</b></div>
+                <div><button onclick="remove">remove</button></div>
+                <div><button onclick="save">save</button></div>
+            </div>
+        </div>
+        <div id="bill">
+            <div><h1>Total Items</h1></div>
+            <div><h1>Savings</h1></div>
+            <div><h1>Discounts</h1></div>
+            <div><h1>Total Price </h1></div>
+        </div>
+        </div>
+    </div>
+</body>
+</html>
+<script src="cart.js"></script>
