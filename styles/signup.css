@@ -60,7 +60,7 @@
 #signupBox .password{
     width: 100%;
 }
-#email{
+#email , .login-email-input{
     width: 100%;
 }
 .inside-signup-checkbox{
