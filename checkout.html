@@ -74,12 +74,16 @@
     <div id="shippingMethod">
         <div class="shipping-method-text">Shipping Method</div>
         <div>
-            <input type="radio" checked="checked" name="radio" value="11839.94">
-            <label for=""><strong>International Standard - </strong>11839.94 INR</label> <br>
-            <p>Estimated Delivery Date: 2022-04-18</p>
-            <input type="radio" name="radio" value="17612.69">
-            <label for=""><strong>International Express - </strong>17612.69 INR</label>
-            <p>Estimated Delivery Date: 2022-04-13</p>
+            <div id="intStandard">
+                <input type="radio" name="radio" value="11839.94" id="check1" onchange="getChecked()">
+                <label for=""><strong>International Standard - </strong>11839.94 INR</label> <br>
+                <p>Estimated Delivery Date: 2022-04-18</p>
+            </div>
+            <div id="intExpress">
+                <input type="radio" name="radio" value="17612.69" id="check2" onchange="getChecked()">
+                <label for=""><strong>International Express - </strong>17612.69 INR</label>
+                <p>Estimated Delivery Date: 2022-04-13</p>
+            </div>
         </div>
     </div>
     <!-- the confirm order box -->
@@ -97,11 +101,11 @@
                 </tr>
                 <tr>
                     <td>Duty and Tax:</td>
-                    <td class="duty"></td>
+                    <td class="duty" style="font-weight: bold;"></td>
                 </tr>
                 <tr>
                     <td><strong>Order Total:</strong></td>
-                    <td class="orderTotal"></td>
+                    <td class="orderTotal" style="font-weight: bold;"></td>
                 </tr>
             </tbody>
         </table>

@@ -1,3 +1,27 @@
+
+const getChecked = () => {
+    let cartTotal = 16000 ;
+    const checkBox = document.querySelector('#check1').checked ;
+    const val1 = document.getElementById('check1').value ;
+    const checkBox2 = document.getElementById('check2').checked ;
+    const val2 = document.getElementById('check2').value ;
+    let tax = Math.floor(Math.random()*(14892-9999)+9999) ;
+    let grossTotal ;
+    document.querySelector('.duty').innerText = tax + " INR"
+    if(checkBox===true){
+        document.querySelector('.shipping').innerText = Number(val1) + " INR" ;
+        grossTotal = cartTotal + Number(val1) + tax ;
+        document.querySelector('.orderTotal').innerText = grossTotal + " INR" ;
+    }
+    else if(checkBox2===true){
+        document.querySelector('.shipping').innerText = Number(val2) + " INR" ;
+        grossTotal = cartTotal + Number(val2) + tax ;
+        document.querySelector('.orderTotal').innerText = grossTotal + " INR" ;
+    }
+}
+
+
+
 const placeOrder = () => {
     let card = document.getElementById('card_number').value ;
     card = String(card) ;
