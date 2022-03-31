@@ -15,7 +15,6 @@
 
         #top{
             display: flex;
-            /* border: 2px solid black; */
             width: 92%;
             margin: auto;
         }
@@ -88,6 +87,8 @@
         #last{
             display: flex;
             margin-top:100px ;
+            
+           
         }
        
 
@@ -98,6 +99,7 @@
             display: grid;
             grid-template-columns: repeat(3,1fr);
             gap: 20px;
+           
             
         }
 
@@ -158,7 +160,8 @@
         #lastLeft{
             overflow-x:hidden; 
            overflow-y:scroll;
-           height: 600px;       
+           height: 600px;  
+           
         }
     </style>
     
@@ -189,11 +192,11 @@
 
     <div id="sort">
         <h3>Sort By :</h3>
-        <select id="sortBy" onclick="sortby()">
-            <option value="By Selling">By Selling</option>
+        <select id="sortBy" onclick="sortby()" >
+            <option value="By Selling" >By Selling</option>
             <option value="lth" >Price Low-High</option>
             <option value="htl" >Price High-Low</option>
-            <option value="rating">Rating</option>
+            <option value="rating" >Rating</option>
         </select>
     </div>
 
@@ -208,8 +211,15 @@
                 <option value="">Settee</option>
             </select>
             <br>
-            <select name="" id="">
+            <select name="" id="filterPrice" onchange="filter()">
                 <option value="">Price</option>
+                <option value="280000">180000-220000</option>
+                <option value="80001">80000-180000</option>
+                <option value="40001">60000-80000</option>
+                <option value="20000">20000-60000</option>
+                
+               
+              
              </select>
              <br>
             <select name="" id="">
@@ -276,11 +286,13 @@ let data=JSON.parse(localStorage.getItem("furniture"))
 
 let main=data;
 
-console.log(data);
+
 
 let container=document.getElementById("lastRight")
 
 const appenddata=(main)=>{
+
+    container.innerHTML=null;
 
         main.forEach((e)=>{
 
@@ -316,7 +328,7 @@ const appenddata=(main)=>{
 
                 localStorage.setItem("product",JSON.stringify(dataarray))
 
-                // window.location.href="pa"
+                window.location.href="productpage.html"
             })
 
 
@@ -537,11 +549,9 @@ let furnituredata=[
 ]
 
 
-// array.push(furnituredata);
 
 localStorage.setItem("furniture",JSON.stringify(furnituredata))
 
-// appenddata(main);
 
 
 
@@ -654,34 +664,54 @@ thirdShow(secData)
 
     // for sorting data in term of price and rating
 
-    let sortBy=document.getElementById("sortBy").value;
-    console.log(sortBy)
+    // let sortBy=document.getElementById("sortBy").value;
+    // console.log(sortBy)
 
 
     function sortby()
     {
-        let sortby=document.querySelector("#sortBy").value
+        let sorting=document.querySelector("#sortBy").value
 
-        if(sortby==="htl")
+        if(sorting==="htl")
         {
             
             main.sort((a,b)=>{
                 return b.price-a.price
             })
-            appenddata();
+
+            console.log(main)
+            appenddata(main);
+            
         }
-      else if(sortby==="lth")
+      else if(sorting==="lth")
         {
             main.sort((a,b)=>{
                 return a.price-b.price
             })
-            appenddata();
+            console.log(main)
+            appenddata(main);
         }
        
     }
 
 
 
+
+    //price filter 
+
+    function filter()
+    {
+        let num=document.getElementById("filterPrice").value;
+
+        let filterData=main.filter((e)=>{
+
+            
+            return e.price<Number(num);
+        })
+
+        appenddata(filterData)
+        // console.log(filterData)
+    }
 
 
 </script>
