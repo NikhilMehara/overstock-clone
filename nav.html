@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>navbar</title>
+    <style>
+        *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap');
+
+  
+  *:focus{
+    outline: none;
+  }
+  body{
+    position: relative;
+    background: #f0f0f0;
+    font-family: 'roboto',sans-serif;
+  }
+  .navbar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    padding: 0 2.5vw;
+  }
+
+  .logo{
+      padding-left:0;
+    height: 50px;
+    margin: -10px 30px 0;
+  
+  }
+  .search-box{
+    position: relative;
+    max-width: 500px;
+    width: 500%;
+    height: 35px;
+    display: flex;
+  }.search-bar{
+    width: 250%;
+    height: 100%;
+    border: 2px solid #dbdbdb;
+    padding: 0 20px;
+    font-size: 16px;
+    text-transform: capitalize;
+  }
+  .search-btn{
+    width: 50%;
+    height: 100%;
+    background:red;
+    border: 2px solid #dbdbdb;
+    padding: 5px 0;
+  }
+  .user-options{
+        height: 35px;
+        display: flex;
+        margin-left: auto;
+        align-items: center;
+    padding-left: 100px;
+      padding-right: 0px;
+      width: 25%;
+      gap: 10px;
+      padding-top: 5px;
+      
+  }
+    </style>
+</head>
+<body>
+
+      <nav>
+        <div class="navbar">
+           
+              <!-- logo-->
+              <img src="https://logos-download.com/wp-content/uploads/2017/01/Overstock_logo.png" class="logo" alt="">
+            <!--Search-->
+              <div class="search-box" >
+               <input type="text" class="search-bar" placeholder="search"   >
+             <!--search button-->
+              <button   class="search-btn"><img src="https://cdn-icons-png.flaticon.com/512/622/622669.png" width="20px" height="20px" onClick="get()"></button>
+            </div>
+            <div class="user-options">
+              <figure>
+                <img src="https://cdn-icons-png.flaticon.com/512/747/747376.png"  width="30px" height="30px" class="icon" alt="">
+                <figcaption>Acount</figcaption>
+              </figure>
+              <figure>
+                <img src="https://cdn-icons-png.flaticon.com/512/860/860808.png"  width="30px" height="30px" class="icon" alt="">
+                <figcaption>List</figcaption>
+              </figure>
+              <figure>
+                <img src="https://cdn-icons-png.flaticon.com/512/1170/1170678.png"  width="30px" height="30px" class="icon" alt="">
+                <figcaption>Cart</figcaption>
+              </figure> 
+              
+            </div>
+           
+            </div>
