@@ -28,6 +28,10 @@
             cursor: pointer;
         }
 
+        #background:hover{
+            cursor: pointer;
+        }
+
         #topLeft>h1{
             font-size: 38px;
             margin-bottom: 50px;
@@ -35,6 +39,7 @@
         #background{
             background-image: url(//ak1.ostkcdn.com/img/mxc/09142020_FALLEGREEN_057z_SofasandCouches_AMOD.jpg?&impolicy=custom);
             width: 70%;
+            background-size: cover;
             height: 400px;
             background-repeat: no-repeat;
             
@@ -46,6 +51,7 @@
             width: 92%;
             margin: auto;
             text-align: center;
+            
         }
 
         #second>h2{
@@ -67,11 +73,13 @@
             width: 320px;
             height: 60px;
             margin-left: 50px;
-            font-weight: bold;
-            font-size: 18px;
+           
+            font-size: 16px;
             border-left:0px;
             border-right:0px;
             outline:0px;
+            color: #2f3337;
+           font-weight: 700;
         }
 
         option{
@@ -90,6 +98,7 @@
             display: grid;
             grid-template-columns: repeat(3,1fr);
             gap: 20px;
+            
         }
 
         #sort{
@@ -111,6 +120,7 @@
         #secDivInner{
             width: 240px;
             cursor: pointer;
+            font-size: 20px;
         }
 
 
@@ -148,8 +158,7 @@
         #lastLeft{
             overflow-x:hidden; 
            overflow-y:scroll;
-           height: 800px;
-           
+           height: 600px;       
         }
     </style>
     
@@ -269,127 +278,11 @@ let main=data;
 
 console.log(data);
 
-// let container=document.getElementById("container")
-
 let container=document.getElementById("lastRight")
 
 const appenddata=(main)=>{
 
-    
-//         let topdiv=document.createElement("div")
-//         topdiv.setAttribute("id","topcontainer")
-        
-//         let div1=document.createElement("div")
-//         div1.setAttribute("id","leftdiv")
-
-//         let p1=document.createElement("p")
-//         p1.innerText="Sofas";
-
-//         let p2=document.createElement("p")
-//         p2.innerText="Sectionals";
-
-//         let p3=document.createElement("p")
-//         p3.innerText="Loveseats";
-
-//         let p4=document.createElement("p")
-//         p4.innerText="Sleeper Sofas";
-
-//         let p5=document.createElement("p")
-//         p5.innerText="Leather Sofas";
-
-//         let p6=document.createElement("p")
-//         p6.innerText="Recliner Sofas";
-
-//         let p7=document.createElement("p")
-//         p7.innerText="Shop all Sofas & Couches";
-
-//         let div2=document.createElement("div")
-//         div2.setAttribute("id","righttop")
-
-//         let seconddiv=document.createElement("div")
-//         seconddiv.setAttribute("id","second")
-
-//         let h3=document.createElement("h3")
-//         h3.innerText="Shop by Type";
-
- 
-//         // s2data.forEach((e)=>{
-
-//         //     let cdiv=document.createElement("div")
-
-//         //     let img=document.createElement("img");
-            
-//         //     let name1=document.createElement("h2")
-
-//         //     cdiv.append(img,name1)
-//         // })
-
-//         let thirddiv=document.createElement("div")
-//         thirddiv.setAttribute("id","third")
-
-//         let h4=document.createElement("h3")
-//         h4.innerText="Shop by Style";
-
-
-//         let bottomcontainer=document.createElement("div")
-//         bottomcontainer.setAttribute("id","bottom")
-
-//         let leftdiv=document.createElement("div")
-//         leftdiv.setAttribute("id","bottomleft")
-
-//         let type=document.createElement("h3")
-//         type.innerText="Type";
-
-//         let price=document.createElement("h3")
-//         price.innerText="Price";
-
-//         let colors=document.createElement("h3")
-//         colors.innerText="Colors";
-
-//         let Materials=document.createElement("h3")
-//         Materials.innerText="Upholstery Materials"
-
-
-//         let styles=document.createElement("h3")
-//         styles.innerText="Styles";
-
-//         let arm=document.createElement("h3")
-//         arm.innerText="Arm Styles";
-
-//         let back=document.createElement("h3")
-//         back.innerText="BackStyles";
-
-//         let brands=document.createElement("h3")
-//         brands.innerText="Brands";
-
-//         let prints=document.createElement("h3")
-//         prints.innerText="Prints";
-
-//         let assembly=document.createElement("h3")
-//         assembly.innerText="Assembly";
-
-//         let sales=document.createElement("h3")
-//         sales.innerText="Sales & Promotions";
-
-//         let products=document.createElement("h3")
-//         products.innerText="Product Features";
-
-//         let customer=document.createElement("h3")
-//         customer.innerText="Customer Rating";
-
-//         let availability=document.createElement("h3")
-//         availability.innerText="Availability";
-
-//         leftdiv.append(type,price,colors,Materials,styles,arm,back,brands,prints,assembly,sales,products,customer,availability)
-        
-//         let rightdiv=document.createElement("div")
-//         rightdiv.setAttribute("id","bottomright")
-
-        
-
         main.forEach((e)=>{
-
-          
 
             let innerdiv=document.createElement("div");
             innerdiv.setAttribute("id", "bottominner")
@@ -718,7 +611,7 @@ const secondShow=(data)=>{
         let img=document.createElement("img")
         img.src=e.imgSrc;
 
-        let name=document.createElement("h3")
+        let name=document.createElement("p")
         name.innerText=e.category;
 
         div.append(img,name)
@@ -743,18 +636,12 @@ data.forEach((e)=>{
     let img=document.createElement("img")
     img.src=e.imgSrc;
 
-    let name=document.createElement("h3")
+    let name=document.createElement("p")
     name.innerText=e.category;
 
     div.append(img,name)
 
     byStyle.append(div)
-
-   
-
-
-
-
 })
 
 }
