@@ -5,74 +5,215 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+#main{
+    display: flex;
+    justify-content:center;
+    gap: 20px;
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", 
+     Helvetica, Arial, "Lucida Grande", sans-serif;
+
+}
+#totalDiv>div{
+    display: flex;
+    text-align: center;
+}
+#itemDiv{
+    display: flex;
+}
+#redMe{
+    font-size: 18px;
+    color: red;
+}
+#total_savings{
+    font-size: 18px;
+    color: red;
+    text-align: center;
+}
+#checkout{
+    background-color:wheat;
+   
+}#art{
+    font-size: 22px;
+}
+#imgDiv{
+    
+
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+#itemDiv{
+    
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+#totalDiv{
+    
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+   
+    </style>
 </head>
 <body>
-    <div id="cart">cart</div>
+    <div id="main">
+        <div id="cart"><p>Shoping Cart</p></div>
+        <div id="totalDiv">
+            <div > 
+<!------------------------------------- All billing  ------------------------------------------------------->
+                <h4>(</h4><h4 id="qty">0</h4><h4>)</h4><h4>Items&nbsp-&nbsp &nbsp; ₹ &nbsp;</h4>
+                <h6 id="total">₹</h6>
+            </div>
+            <div>
+                <h4>Promotional Savings&nbsp-&nbsp &nbsp; ₹ &nbsp; </h4>
+                <h4 id="total_savings">0</h4>
+            </div>
+            <div>
+                <h4>Total Sum After Discount&nbsp-&nbsp &nbsp;₹ &nbsp;</h4>
+                <h4 id="subtotal"></h4>
+            </div>
+            <div>
+                <h2 id="total_price_text">Your Total&nbsp-&nbsp &nbsp; ₹ &nbsp;</h2>
+                <h2 id="total_price">₹</h2>
+            </div>
+            <div id="checkout_btn">
+                <i class="fa-solid fa-lock"></i>
+                <h4 id="checkout">Checkout</h4>
+            </div>
+            <div><input type="text" id="promo" placeholder="Write Coupon Code"><button id="apply">Apply</button></div>
+            <div id="discount_coupon">
+                <p>Apply &nbspRAVTJ20&nbsp to get 20% discount</p>
+                <div id="right_mark"></div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
 <script>
-    let data = []
-let object = JSON.parse(localStorage.getItem("cartitems"))
-data.push(object)
+    //---------------------------------sample data-------------------------
+    let arr =[{
+        name : "Futzca Modern L-shaped Compact Convertible Sectional Sofa w/ Reversible Chaise",
+        category: "Sofa",
+        price : 41500,
+        rating: 4,
+        imgSrc : "https://ak1.ostkcdn.com/images/products/is/images/direct/47c9ae93df558cc6a7214693e20c3b81a9dd4523/Futzca-Convertible-Sectional-Sofa-Couch-with-Reversible-Chaise%2C-Modern-Linen-Fabric-L-Shaped-Couch-for-Small-Space.jpg?imwidth=480&impolicy=medium"
+    }]
+    localStorage.setItem(("cartItem"),JSON.stringify(arr))
 
-console.log(data)
+    let data= JSON.parse(localStorage.getItem("cartItem"))
+            // A.Creation B.Giving contents C. Appending D.Appending
+    function showData(){
+        data.map(function(elem){
+            let imgdiv = document.createElement("div")
+            imgdiv.setAttribute("id","imgDiv")  
 
-data.map(function(elem){
-    // A.Creation  (HTML elements)
-    // main div (image+  all data)(for appending )
-    // buttonDiv (remove+save--flex)only rightside(for appending)
-    // imageDiv (left append image only )
-    // 1.name 
-    // 2.price
-    // 3. category
-    // 4 imagesSrc
-    let div = document.createElement("div")
+            let infodiv = document.createElement("div")
+            let div1 =document.createElement("div")
+            div1.setAttribute("id","itemDiv")
 
+            let n = document.createElement("p")
+            n.innerText=elem.name
 
-    let buttonDiv = document.createElement("div")
-    let dataDiv = document.createElement("div")
-    let imageDiv = document.createElement("div")
+            let c = document.createElement("p")
+            c.innerText= elem.category
 
+            let p = document.createElement("p")
+            p.innerText="₹"+ elem.price
+            p.setAttribute("id","redMe")
 
-    let name = document.createElement("p")
-    let category = document.createElement("p")
-    let price = document.createElement("p")
+            let i = document.createElement("img")
+            i.setAttribute("id","image1")
+            i.src=elem.imgSrc
 
+            var qty = document.createElement("p")
+            qty.innerText = "Quantity:"
 
-    let imageSrc = document.createElement("img")
+            var div=document.createElement("div")
 
-    let saveButton = document.createElement("button")
-    let removeButton = document.createElement("button")
+            var p1=document.createElement("div")
+            p1.innerText="+"
+            // Addinfg event to get sum --------------------------------------------------------------------
+            p1.addEventListener("click",function(){
+            sumofquntity(i);
+        })
+
+         var p3=document.createElement("div")
+            p3.innerText="-"
+
+            // Addinfg event to get sum -----------------------------------------------------------------------------
+         p3.addEventListener("click",function(){
+            subofquntity(i);
+        })
+
+        imgdiv.append(i)
+        div.append(p1,qty,p3)
+        infodiv.append(n,c,p,div)
+        div1.append(imgdiv,infodiv)
+        document.querySelector("#cart").append(div1)
+        })
+    }
     
-    //C.Mapping 
+     //---------------------------Item count++----------------------
 
-   
-    category.innerText=elem.category
-    rating.innerText= elem.rating
-    price.innerText = elem.price
+        function sumofquntity(i){
+            data[i].quntity++;
+            localStorage.setItem("cartItem",JSON.stringify(data))
+            showData(data)
+            Total()
+        }
+    //---------------------------Item count(- ve)----------------
 
-    imageSrc.src = elem.imgSrc
+     function subofquntity(i){
+        data[i].quntity--;
+        localStorage.setItem("cartItem",JSON.stringify(data))
+        Total()
+     }
+ 
+    //--------------------Finding Total Price------------------------------------
 
-    removeButton.innerText= "remove"
-    saveButton.innerText= "Save For Later"
-   
-    //B.Appending 
-    buttonDiv.append(saveButton,removeButton)
-    imageDiv.append(imgSrc)
-    dataDiv.append(name,category,price,buttonDiv)
-    document.querySelector("#cart").append(div)
-    div.append(imageDiv,dataDiv)
-   
-   
+        function Total(){
+            var total = data.reduce(function(acc,el){
+                return acc+el.price
+            },0)
+            document.querySelector("#total").innerText = total;
+        }
+ 
+    //----------------Items count---------------------------------------------
+
+    function quantity(){
+         document.querySelector("#qty").innerText = data.length;
+    }
+    // RAVTJ20 disocunt logic--------------------------------------------------------------------
+
+    var total = document.getElementById("total").innerText
+    var promo = document.getElementById("promo").value
+    var discount =0
+    if(promo=="Ravtj20"){
+         discount=Number(total)*0.2
+         document.getElementById("total_savings").innerText = Number(discount);
+    }else{
+         document.getElementById("total_savings").innerText=Number(total)
+         Total()
+    }
     
+    // Apply button submit and done --------------------------------------------------------
 
-    //Adding the events(2)
-    removeButton.addEventListener("click",removeMe())
-    removeMe(cartData)
-    saveButton.addEventListener("click",saveMe())
-    saveMe(cartData)
-   
+    document.querySelector("#apply").addEventListener("click",function(){
+        apply()
+    })
+    // Fina price to pay after  all discounts--------------------------------------------
 
-})
-
+    quantity(data)
+    function finalprice(){
+        var total = document.getElementById("total").innerText
+        var promo = document.getElementById("promo").value
+        var discount =0
+    if(promo=="Ravtj20"){
+        discount=Number(total)*0.2
+        document.getElementById("total_price").innerText = Number(total)-Number(discount);
+    }else{
+        document.getElementById("total_price").innerText=Number(total)
+        Total()
+    }
+}
+finalprice()
+showData()
 </script>
