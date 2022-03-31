@@ -16,7 +16,7 @@ cartData.map(function(elem,inedx){
     let imageDiv = document.createElement("div")
 
 
-    let name = document.createEleme ("p")
+    let name = document.createElement("p")
     let category = document.createElement("p")
     let price = document.createElement("p")
 
