@@ -1,4 +1,4 @@
-let cartData = JSON.parse(localStorage.getItem("furniture"))
+let cartData = JSON.parse(localStorage.getItem("what?"))
 cartData.map(function(elem,inedx){
     //A.Creation  (HTML elements)
     //main div (image+  all data)(for appending )
@@ -16,7 +16,7 @@ cartData.map(function(elem,inedx){
     let imageDiv = document.createElement("div")
 
 
-    let name = document.createElement("p")
+    let name = document.createEleme ("p")
     let category = document.createElement("p")
     let price = document.createElement("p")
 
@@ -25,34 +25,31 @@ cartData.map(function(elem,inedx){
 
     let saveButton = document.createElement("button")
     let removeButton = document.createElement("button")
-    let addToCart =  document.createElement("button")
-
     //B.Appending 
-
-
 
     document.querySelector("#cart").append(div)
     div.append(imageDiv,dataDiv)
     dataDiv(name,category,price,buttonDiv)
     imageDiv.append(imgSrc)
     buttonDiv.append(saveButton,removeButton)
-
     //C.Mapping 
+
     name.innerText = elem.name
     category.innerText=elem.category
     rating.innerText= elem.rating
     price.innerText = elem.price
 
-    
+    imagesSrc.src = elem.imagesSrc
+
     removeButton.innerText= "remove"
     saveButton.innerText= "Save For Later"
-    addToCart.innerText = "Add to Cart"
+   
 
 
-    //Adding the events(3)
+    //Adding the events(2)
     removeButton.addEventListener("click",removeMe())
     saveButton.addEventListener("click",saveMe())
-    addToCart.addEventListener("click",addMe())
+   
 
 })
 let furnituredata=[
