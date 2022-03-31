@@ -1,0 +1,209 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap');
+
+  
+  *:focus{
+    outline: none;
+  }
+  body{
+    position: relative;
+    background: #f0f0f0;
+    font-family: 'roboto',sans-serif;
+  }
+  .navbar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    padding: 0 2.5vw;
+  }
+
+  .logo{
+      padding-left:0;
+    height: 50px;
+    margin: -10px 30px 0;
+  
+  }
+  .search-box{
+    position: relative;
+    max-width: 500px;
+    width: 500%;
+    height: 35px;
+    display: flex;
+  }.search-bar{
+    width: 250%;
+    height: 100%;
+    border: 2px solid #dbdbdb;
+    padding: 0 20px;
+    font-size: 16px;
+    text-transform: capitalize;
+  }
+  .search-btn{
+    width: 50%;
+    height: 100%;
+    background:red;
+    border: 2px solid #dbdbdb;
+    padding: 5px 0;
+  }
+  .user-options{
+        height: 35px;
+        display: flex;
+        margin-left: auto;
+        align-items: center;
+    padding-left: 100px;
+      padding-right: 0px;
+      width: 25%;
+      gap: 10px;
+      padding-top: 5px;
+      
+  }
+  .deal5{
+    padding-top: 30px;
+    padding-left: 500px;
+    padding-bottom: 20px;
+  }
+  .tag{
+    display: flex;
+    height: 300px;
+    width: 300px;
+    padding-left: 20px;
+    gap: 20px;
+    text-align: center;
+  }
+ .png{
+   padding-top: 50px;
+ }
+  .user-options.icon{
+    height: 80%;
+    justify-items: center;
+    cursor: pointer;
+    gap: 30px;
+  }
+
+   .text {
+    display: flex;
+    margin: auto;
+    gap: 30px;
+  margin-top: 0;
+  padding-top: 80px;
+  margin-left: 30px;
+color: #888;
+text-decoration: none;
+padding-bottom: 10px;
+  }
+  .text a:hover {
+    text-decoration: none;
+    background: underline;
+  }
+/* .text a{
+  text-decoration: none;
+
+} */
+
+  .im{
+ background-image: "https://ak1.ostkcdn.com/img/mxc/03212022-HP-A1-INTL-1400x550.jpg";
+   
+  }
+.deals{
+  color: black;
+  text-align: center;
+  padding-top: 5px;
+  background-color: #fff;
+}
+.img2 {
+  display: flex;
+   padding-top: 10px;
+   padding-bottom: 10px;
+    height: 250px;
+    width: 250px;
+    gap: 10px;
+    padding-left: 20px;  
+}
+.img2 img{
+  border-color: black;
+  border: 1px;
+}
+.ig{
+  padding-top: 50px;
+  padding-left: 30px;
+}
+.deal2{
+  padding-top: 10px;
+  text-align: center;
+ background-color: #fff;
+}
+.img3 {
+  display: flex;
+  padding-top: 10px;
+   height: 250px;
+   width: 250px;
+   gap: 10px;
+   padding-left: 20px;
+   background-color: #f0f0f0; 
+}
+
+  .img4{
+    display: flex;
+    padding-top: 30px;
+     height: 270px;
+     width: 270px;
+     gap: 10px;
+     padding-left: 20px;
+     background-color: #f0f0f0;
+  }
+  .slider{
+    display: flex;
+    padding-top: 30px;
+    height: 270px;
+    width: 270px;
+    gap: 10px;
+    padding-left: 20px;
+    background-color: #f0f0f0;
+    
+    
+  }
+  .deal3{
+    padding-top: 20px;
+    text-align: center;
+   
+  }
+  .img-box img{
+    width: 100%;
+    text-align: center;
+    padding: 400px;
+  }
+  .btn{
+    border: none;
+    outline: none;
+    background: #888;
+    padding: 10px 30px;
+    font-size: 20px;
+    color: #ddd;
+    cursor: pointer;
+    margin: 10px auto;
+    justify-items: center;
+  }
+   .imgtext{
+    display: flex;
+    margin-left: 90px;
+    gap: 220px;
+  } 
+  .p{
+    display: flex;
+    text-align: center;
+    margin-left: 30px;
+    gap: 60px;
+    
+  }
+ .png1{
+   padding-top: 30px;
+   padding-left: 10px;
+ }
