@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="./sofa.css">   
+    <title>Sofa & Recliners</title>
+    <link rel="stylesheet" href="/styles/sofa.css">   
     
 </head>
 <body>
@@ -150,10 +150,6 @@ let main=data;
 
 
 
-
-
-
-
 let container=document.getElementById("lastRight")
 
 
@@ -206,7 +202,7 @@ const appenddata=(main)=>{
 
 appenddata(main);
 
-let array=[];
+// let array=[];
 
 let secondData=[
     {
@@ -253,9 +249,9 @@ let secondData=[
     },
 ]
 
-localStorage.setItem("secondData",JSON.stringify(secondData))
+localStorage.setItem("secondData",JSON.stringify(secondData)) ;
 
-let secData=JSON.parse(localStorage.getItem("secondData"))
+let secData=JSON.parse(localStorage.getItem("secondData")) 
 
 let byType=document.getElementById("byType")
 
