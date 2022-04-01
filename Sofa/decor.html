@@ -12,26 +12,22 @@
     <div id="container"></div>
     <div id="top">
         <div id="topLeft">
-            <h1>Sofas & Couches</h1>
-            <p>Sofa</p>
-            <p>Sectional</p>
-            <p>Loveseats</p>
-            <p>Sleeper Sofas</p>
-            <p>Leather Sofas</p>
-            <p>Recliner Sofas</p>
-            <p id="bookmark">🔖 Shops all Sofas & Couches on Sale</p>
+            <h1>Wrapped Canvas</h1>
+            <p>Oversized Canvas Art</p>
+            <p>Large Canvas Art</p>
+            <p>Medium Canvas Art</p>
+            <p>Abstract Canvas Art</p>
+            <p>Landscape Canvas Art</p>
+            <p>Floral Canvas Art</p>
+            
+            <p id="bookmark">🔖 Shops all Gallery Wrapped Canvas on Sale</p>
         </div>
-        <div id="background"></div>
+        <div id="backgroundDecor"></div>
      </div>
      <div id="second">
         <h2>Shop by Type</h2>
         <div id="byType"></div>
     </div>
-    <div id="third">
-        <h2>Shop by Style</h2>
-        <div id="byStyle"></div>
-    </div>
-
     <div id="sort">
         <h3>Sort By :</h3>
         <select id="sortBy" onclick="sortby()" >
@@ -45,66 +41,45 @@
     <div id="last">
         <div id="lastLeft">
             <select>
-                <option> Type</option>
-                <option>Sofa</option>
-                <option value="">Sleeper sofa</option>
-                <option value="">Recliner</option>
-                <option value="">Sets</option>
-                <option value="">Settee</option>
+                <option> Size</option>
+               
             </select>
             <br>
             <select name="" id="filterPrice" onchange="filter()">
                 <option value="">Price</option>
-                <option value="180000">180000-220000</option>
+                <option value="280000">180000-220000</option>
                 <option value="80001">80000-180000</option>
-                <option value="60001">60000-80000</option>
+                <option value="40001">60000-80000</option>
                 <option value="20000">20000-60000</option>
-                
-               
-              
-             </select>
+            </select>
              <br>
             <select name="" id="">
-                <option value="">Colors</option>
-                <option value="">Grey</option>
-                <option value="">Brown</option>
-                <option value="">Blue</option>
-                <option value="">White</option>
+                <option value="">Subject</option>
+               
             </select>
             <br>
             <select name="" id="">
-                <option value="">Upholstery Materials</option>
-                <option value="">Leather</option>
-                <option value="">Velvet</option>
-                <option value="">Polyester</option>
-                <option value="">Cotton</option>
+                <option value="">Number of Pieces </option>
+               
             </select>
             <br>
             <select name="" id="">
                 <option value="">Styles</option>
-                <option value="">Modern</option>
-                <option value="">Traditional</option>
-                <option value="">Farmhouse</option>
+               
             </select>
             <br>
             <select name="" id="">
-                <option value="">Arm Styles</option>
-                <option value="">Rolled Arm</option>
-                <option value="">Square Arm</option>
-                <option value="">ROund Arm</option>
-                <option value="">Flared Arm</option>
+                <option value="">Shapes</option>
+              
             </select>
             <br>
             <select name="" id="">
-                <option value="">Back Styles</option>
-                <option value="">Tufted Back</option>
-                <option value="">Cushion Back</option>
-                <option value="">Pillow Back</option>
-                <option value="">Tight Back</option>
+                <option value="">Brands</option>
+                
             </select>
             <br>
             <select name="" id="">
-                <option value="">Bands</option>
+                <option value="">Orientation</option>
             </select>
             <br>
             <select name="" id="">
@@ -213,14 +188,14 @@ let furnituredata=[
         "name" : "Futzca Modern L-shaped Compact Convertible Sectional Sofa w/ Reversible Chaise",
         "category" : "Sofa",
         "price" : "41500",
-        "rating": "⭐⭐⭐⭐⭐ 500",
+        "rating": "⭐⭐⭐⭐ 400",
         "imgSrc" : "https://ak1.ostkcdn.com/images/products/is/images/direct/47c9ae93df558cc6a7214693e20c3b81a9dd4523/Futzca-Convertible-Sectional-Sofa-Couch-with-Reversible-Chaise%2C-Modern-Linen-Fabric-L-Shaped-Couch-for-Small-Space.jpg?imwidth=480&impolicy=medium"
     },
     {
         "name" : "Rosevera Bjorn Chesterfield Settee",
         "category" : "Sofa",
         "price" : "31000",
-        "rating": "⭐⭐⭐⭐ 400",
+        "rating": "⭐⭐⭐⭐⭐ 500",
         "imgSrc" : "https://ak1.ostkcdn.com/images/products/is/images/direct/696a26f965a1db3bf2c6b1db928a2931f0ad78d4/Rosevera-Bjorn-Chesterfield-Settee.jpg?imwidth=480&impolicy=medium"
     },
     {
@@ -498,31 +473,6 @@ const secondShow=(data)=>{
 }
 
 secondShow(secData)
-
-
-//for third data
-
-const thirdShow=(data)=>{
-
-data.forEach((e)=>{
-
-    let div=document.createElement("div")
-    div.setAttribute("id","secDivInner")
-
-    let img=document.createElement("img")
-    img.src=e.imgSrc;
-
-    let name=document.createElement("p")
-    name.innerText=e.category;
-
-    div.append(img,name)
-
-    byStyle.append(div)
-})
-
-}
-
-thirdShow(secData)
     
 
     function sortby()
@@ -540,7 +490,7 @@ thirdShow(secData)
             appenddata(main);
             
         }
-      if(sorting==="lth")
+      else if(sorting==="lth")
         {
             main.sort((a,b)=>{
                 return a.price-b.price
@@ -548,15 +498,8 @@ thirdShow(secData)
             console.log(main)
             appenddata(main);
         }
-       if(sorting==="rating")
-        {
-            main.sort((a,b)=>{
-              return a.rating-b.rating;
-            })
-            console.log(main)
-
-            appenddata(main)
-        }
+       
+       
     }
 
 
@@ -571,7 +514,7 @@ thirdShow(secData)
         let filterData=main.filter((e)=>{
 
             
-            return e.price>Number(num);
+            return e.price<Number(num);
         })
 
         appenddata(filterData)
