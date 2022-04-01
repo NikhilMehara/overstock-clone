@@ -1,6 +1,8 @@
 
 const getChecked = () => {
-    let cartTotal = 16000 ;
+    let cartTotal = localStorage.getItem('final_price') ;
+    cartTotal = +cartTotal ;
+    document.querySelector('.sub-total').innerText=cartTotal + " INR"
     const checkBox = document.querySelector('#check1').checked ;
     const val1 = document.getElementById('check1').value ;
     const checkBox2 = document.getElementById('check2').checked ;
@@ -29,14 +31,15 @@ const placeOrder = () => {
     cvv = String(cvv) ;
     if(card.length===16){
         if(card==='1234567891234567' && cvv==='321'){
-           window.location.href = '' ;
+           window.location.href = 'otp.html' ;
         }
         else if(card==='14785236914785236' && cvv==='789'){
-            window.location.href = '' ;
+            window.location.href = 'otp.html' ;
         }
         else{
             alert('Invalid Card Details') ;
         }
+        
     }
     else{
         alert('Please enter a valid Card Number') ;
