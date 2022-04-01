@@ -25,8 +25,8 @@
         <div id="backgroundDecor"></div>
      </div>
      <div id="second">
-        <h2>Shop by Type</h2>
-        <div id="byType"></div>
+        <h2>Popular Sizes & Sets</h2>
+        <div id="bypopular"></div>
     </div>
     <div id="sort">
         <h3>Sort By :</h3>
@@ -118,7 +118,7 @@
 
 
 
-let data=JSON.parse(localStorage.getItem("furniture"))
+let data=JSON.parse(localStorage.getItem("decor"))
 
 let main=data;
 
@@ -362,7 +362,7 @@ let decordata=[
 
 
 
-localStorage.setItem("furniture",JSON.stringify(decordata))
+localStorage.setItem("decor",JSON.stringify(decordata))
 
 
 
@@ -371,12 +371,12 @@ localStorage.setItem("furniture",JSON.stringify(decordata))
 
 
 let secondDecorData=[
- {
-    "name" : "Wrapped Canvas",
-    "rating" : "",
-    "price" : "",
-    "imgSrc" : "https://ak1.ostkcdn.com/img/mxc/04292019_WrappedCanvas_A1.jpg?imwidth=1200&impolicy=custom"
-},
+//  {
+//     "name" : "Wrapped Canvas",
+//     "rating" : "",
+//     "price" : "",
+//     "imgSrc" : "https://ak1.ostkcdn.com/img/mxc/04292019_WrappedCanvas_A1.jpg?imwidth=1200&impolicy=custom"
+// },
 {
     "name" : "Oversized Canvas Art",
     "rating" : "",
@@ -419,16 +419,16 @@ localStorage.setItem("secondData",JSON.stringify(secondDecorData))
 
 let secData=JSON.parse(localStorage.getItem("secondData"))
 
-let byType=document.getElementById("byType")
+let byType=document.getElementById("bypopular")
 
-// let bySype=document.getElementById("bySype")
+
 
 const secondShow=(data)=>{
 
     data.forEach((e)=>{
 
         let div=document.createElement("div")
-        div.setAttribute("id","secDivInner")
+        div.setAttribute("id","decorDivInner")
 
         let img=document.createElement("img")
         img.src=e.imgSrc;

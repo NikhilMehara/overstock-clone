@@ -206,3 +206,19 @@ option{
    margin-bottom: 100px;
     margin-top: 100px;
 }
+
+#decorDivInner{
+  
+   width: 240px;
+   cursor: pointer;
+   font-size: 20px;
+}
+
+#decorDivInner>img{
+   width: 100%;
+}
+
+#bypopular{
+   display: flex;
+   justify-content: space-around;
+}
