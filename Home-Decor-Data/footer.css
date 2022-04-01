@@ -7,14 +7,10 @@
     display: flex;
     justify-content: space-evenly;
 }
-#full_foot{
-    font-family: sans-serif;
-    color: white;
-}
 #upper_foot > div{
     margin-top: 4%;
-    /* padding-right: -50px; */
-    /* border: 1px solid red; */
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
 }
 #upper_foot > div >p{
     font-size: 13px;
@@ -31,6 +27,8 @@
 #lower_foot > div{
     display: flex;
     font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
     /* border: 1px solid teal; */
 }
 #lower_foot > #left{
