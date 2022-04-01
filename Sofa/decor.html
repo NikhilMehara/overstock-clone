@@ -370,58 +370,58 @@ localStorage.setItem("furniture",JSON.stringify(decordata))
 
 
 
-let secondData=[
-    {
-        "name" : "Futzca Modern L-shaped Compact Convertible Sectional Sofa w/ Reversible Chaise",
-        "category" : "Sofa",
-        "price" : "41500",
-        "rating": "4",
-        "imgSrc" : "https://ak1.ostkcdn.com/img/mxc/02152018_SofasCouches_Sofas&Couches.jpg?imWidth=320&impolicy=medium"
-    },
-    {
-        "name" : "Rosevera Bjorn Chesterfield Settee",
-        "category" : "Sleeper Sofa",
-        "price" : "31000",
-        "rating": "5",
-        "imgSrc" : "https://ak1.ostkcdn.com/img/mxc/06132019_SP057_BMOD1-2.jpg?imWidth=320&impolicy=medium"
-    },
-    {
-        "name" : "Morden Style Sofa Set Couch Furniture Upholstered Armchair, Loveseat and Three Seat Sofa for Home or Office (1+2+3-Seat)",
-        "category" : "Recliner Sofa",
-        "price" : "288099",
-        "rating": "4",
-        "imgSrc" : "https://ak1.ostkcdn.com/images/products/23463782/ProLounger-Dark-Grey-Tufted-Velvet-3-Seat-Recliner-Loveseat-n-a-9638d0eb-0d2a-40b6-af1f-ec3cc7c320c2.jpg?imWidth=320&impolicy=medium"
-    },
-    {
-        "name" : "90 L L-Shaped Reversible Pull out Sleeper,Sectional Storage Sofa Bed",
-        "category" : "Sofa Sets",
-        "price" : "170050",
-        "rating": "5",
-        "imgSrc" : "https://ak1.ostkcdn.com/images/products/26275463/McCallister-Oatmeal-Tweed-Fabric-Seating-by-iNSPIRE-Q-Artisan-c0ddd0e0-f7db-4df0-a305-0c6c86886fcc.jpg?imWidth=320&impolicy=medium"
-    },
-    {
-        "name" : "90 L L-Shaped Reversible Pull out Sleeper,Sectional Storage Sofa Bed",
-        "category" : "Sectionals",
-        "price" : "170050",
-        "rating": "5",
-        "imgSrc" : "https://ak1.ostkcdn.com/images/products/22057532/Matilda-Mid-Century-Fabric-Chaise-Sectional-Sofa-by-Christopher-Knight-Home-55b83a6e-471f-472e-a416-e229e72fa7d2.jpg?imWidth=320&impolicy=medium"
-    },
-    {
-        "name" : "90 L L-Shaped Reversible Pull out Sleeper,Sectional Storage Sofa Bed",
-        "category" : "Loveseats",
-        "price" : "170050",
-        "rating": "5",
-        "imgSrc" : "https://ak1.ostkcdn.com/images/products/25860917/Fenn-Square-Arm-Living-Room-Seating-by-iNSPIRE-Q-Modern-8e849781-c470-4cf1-883f-456f187dda91.jpg?imWidth=320&impolicy=medium"
-    },
+let secondDecorData=[
+ {
+    "name" : "Wrapped Canvas",
+    "rating" : "",
+    "price" : "",
+    "imgSrc" : "https://ak1.ostkcdn.com/img/mxc/04292019_WrappedCanvas_A1.jpg?imwidth=1200&impolicy=custom"
+},
+{
+    "name" : "Oversized Canvas Art",
+    "rating" : "",
+    "price" : "",
+    "imgSrc" : "https://ak1.ostkcdn.com/img/mxc/112119-SP-WrappedCanvas-BMOD-1.jpg?imWidth=320&impolicy=medium"
+},
+{
+    "name" : "Large Canvas Art",
+    "rating" : "",
+    "price" : "",
+    "imgSrc" : "https://ak1.ostkcdn.com/images/products/25628670/Madison-Park-Twilight-Mystere-Blush-Grey-100-Percent-Hand-Brush-Embellished-Canvas-3-Piece-Set-blush-grey-04d73003-e2c6-48fd-8278-bfa33da63873_320.jpg?imWidth=320&impolicy=medium"
+},
+{
+    "name" : "Medium Canvas Art",
+    "rating" : "",
+    "price" : "",
+    "imgSrc" : "https://ak1.ostkcdn.com/images/products/25705398/Designart-Indigo-Panel-I-Glam-Modern-Premium-Canvas-Wall-Art-Blue-67bbcfdc-32ad-4dbc-954f-ac67b4251782_1000.jpg?imWidth=320&impolicy=medium"
+},
+{
+    "name" : "Small Canvas Art",
+    "rating" : "",
+    "price" : "",
+    "imgSrc" : "https://ak1.ostkcdn.com/images/products/29762963/Oliver-Gal-Solid-Gold-Navy-Silver-Typography-and-Quotes-Wall-Art-Canvas-Print-Blue-Gray-9ac5528b-ddfd-48c3-a734-68ebf4ccff7f_320.jpg?imWidth=320&impolicy=medium"
+},
+{
+    "name" : "1-Piece Canvas Art",
+    "rating" : "",
+    "price" : "",
+    "imgSrc" : "https://ak1.ostkcdn.com/images/products/is/images/direct/a7d3ec7d077d74473fec62ba0ef2687d601495c7/Designart-%27Garden-Dreams-Flower%27-Traditional-Gallery-wrapped-Canvas.jpg?imWidth=320&impolicy=medium"
+},
+{
+    "name" : "2-Piece Canvas Art",
+    "rating" : "",
+    "price" : "",
+    "imgSrc" : "https://ak1.ostkcdn.com/images/products/8231786/Ready2HangArt-Abstract-Spa-2-piece-Gallery-wrapped-Canvas-Art-Set-133e4967-3be3-44d2-aa4a-f298727a84b7_320.jpg?imWidth=320&impolicy=medium"
+}, 
 ]
 
-localStorage.setItem("secondData",JSON.stringify(secondData))
+localStorage.setItem("secondData",JSON.stringify(secondDecorData))
 
 let secData=JSON.parse(localStorage.getItem("secondData"))
 
 let byType=document.getElementById("byType")
 
-let bySype=document.getElementById("bySype")
+// let bySype=document.getElementById("bySype")
 
 const secondShow=(data)=>{
 
@@ -434,7 +434,7 @@ const secondShow=(data)=>{
         img.src=e.imgSrc;
 
         let name=document.createElement("p")
-        name.innerText=e.category;
+        name.innerText=e.name;
 
         div.append(img,name)
 
@@ -472,8 +472,6 @@ secondShow(secData)
        
        
     }
-
-
 
 
     //price filter 
