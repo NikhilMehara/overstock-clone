@@ -1,11 +1,11 @@
 
-import {ratingstars,selecthtml,detailslist,specslist,customerBars} from './components_prod_page/rating.js'
+import {ratingstars,selecthtml,detailslist,specslist,customerBars} from '/rohit/components_prod_page/rating.js'
 
-console.log(ratingstars,selecthtml,detailslist,specslist,customerBars)
+//console.log(ratingstars,selecthtml,detailslist,specslist,customerBars)
 
 
 let data = JSON.parse(localStorage.getItem("product"))
-console.log(data)
+//console.log(data)
 
 let productdiv = document.getElementById("product_page")
 
@@ -18,6 +18,8 @@ let customerreviews = document.getElementById("customerreviews")
 let custreviews = document.getElementById("custreviews")
 
 const appendData = (data) => {
+console.log(data);
+
 
      let divleft = document.createElement('div');
      divleft.setAttribute("id","divleft")
