@@ -37,7 +37,7 @@ regdUsers.forEach(el => {
     if(email===el.email && password===el.password){
         flag = true ;
         alert("Login Successful") ;
-        window.location.href = "" ;
+        window.location.href = "./punam/homepage.html" ;
     }
 });
 if(flag===false){

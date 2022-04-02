@@ -4,12 +4,13 @@
 }
 /* styling the main container containing signup and login boxes */
 #jarvis{
-    border: 1px solid black;
+   
+    margin-top: 30px;
 }
 #accContainer{
     height: 600px;
     width: 58%;
-    border: 1px solid black;
+    /* border: 1px solid black; */
     margin: auto;
     display: flex;
     justify-content: space-around;
@@ -141,7 +142,7 @@
 }
 /* styling the footer of the account page */
 #accountsFooter{
-    border: 1px solid red;
+    /* border: 1px solid red; */
     font-size: 12px;
     color: rgb(68,68,68);
     padding: 10px;

@@ -339,6 +339,7 @@ function clickToFav(data)
 function addToCartFun(data){
     console.log(data)
     localStorage.setItem("cartitems",JSON.stringify(data))
+    // window.location.href="/cart/cart.html"
 }
 
 function likeIcon(){

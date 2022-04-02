@@ -6,8 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Create Account</title>
     <link rel="stylesheet" href="./styles/signup.css">
-</head>
+
+<link rel="stylesheet" href="/styles/navbar.css"></head>
 <body>
+    <div id="nav"></div>
    <div id="jarvis">
     <div id="accContainer">
         <div id="signupBox">
@@ -63,3 +65,8 @@
 </html>
 
 <script src="./scripts/signup.js"></script>
+<script type="module">
+     import {navbarzone} from "/components/navbar.js"
+
+document.getElementById("nav").innerHTML=navbarzone();
+</script>

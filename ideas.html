@@ -8,8 +8,11 @@
     <script src="https://kit.fontawesome.com/b9c5a2816e.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="/styles/ideas.css">
     <link rel="stylesheet" href="./styles/footer.css">
+    <link rel="stylesheet" href="/styles/navbar.css">
 </head>
 <body>
+
+    <div id="nav"></div>
     <div id="topTipDiv"></div>
     <!-- mid data -->
     <div id="midTipDiv">
@@ -250,5 +253,11 @@
 <script type="module">
     import footer from './components/footer.js'
     document.getElementById('foot').innerHTML = footer() ;
+
+
+    import {navbarzone} from "/components/navbar.js"
+
+document.getElementById("nav").innerHTML=navbarzone();
+
 </script>
 <script src="/scripts/ideas.js"></script>

@@ -1,5 +1,5 @@
 *{
-    margin: 0;
+    /* margin: 0; */
     padding: 0;
     box-sizing: border-box;
   }
@@ -29,9 +29,7 @@
   .logo{
     padding-top: 0;
     height: 60px;
- 
-  
-  }
+}
   .search-box{
     position: relative;
      width: 60%;
@@ -57,62 +55,47 @@
     padding: 5px 0;
   }
   .user-options{
-        height: 35px;
+     
+        height: 30px;
         display: flex;
         margin-left: auto;
       padding-right: 0px;
-      width: 18%;
-      gap: 10px;
+      width:28%;
+      
     padding-bottom: 5%;
-    padding-top: 1%;
+    
       
   }
-  .table {
-  border-collapse: collapse;
-  width: 200%;
  
-}
-
-td, th {
-  width: 200%;
-  height: 0;
-  border: none;
-  text-align: center;
-  padding: 20px;
-  margin-left: 30px;
-  background-color: #fff;
-  border-radius: 5px;
-
-}
-.hove:hover{
-  background: rgb(236, 231, 231);
-}
 body{
             
   margin: 0;
   background: #f2f2f2;
 }
 .nav{
+    
   margin-top: 80px;
-  /* display: flex; */
   width: 100%;
   background:#fff;
+ 
    height: 50px; 
 }
-ul{
-  
-  list-style: none;
+
+.navultag{
+  list-style-type: none;
   padding: 0;
   margin: 0;
   position: absolute;
-}
-ul li{
   
+}
+.navultag li{
+  list-style-type: none;
   float: left;
   margin-top: 5px;
+  padding-left: 20px;
 }
-ul li a{
-  
+
+.navultag li a{
   width: 50%;
   color:rgb(95, 93, 93);
   display: block;
@@ -124,20 +107,20 @@ ul li a{
   margin-left: 9px;
   
 }
-a:hover{
+.navultag li a:hover{
   text-decoration: underline;
 }
-ul li ul{
+.navultag li .navultag2{
   background: white;
 }
-ul li ul li ul {
+.navultag li .navultag2 li .navultag {
   float: none;
 
 }
-ul li ul{
+.navultag li .navultag2{
   display: none;
 }
-ul li:hover ul{
+.navultag li:hover .navultag2{
   display: flex;
   flex-direction: column;
 }   

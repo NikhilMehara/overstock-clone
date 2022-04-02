@@ -72,11 +72,12 @@
 
 /* lower div styling */
 #lowerTipDiv{
+    /* border: 2px solid black; */
     margin: auto;
     display: grid;
     width: 85%;
     grid-template-columns: repeat(3,1fr);
-    grid-template-rows: repeat(2,550px);
+    grid-template-rows: repeat(2,750px);
     border-bottom: 1px solid lightgray;
 }
 .mainPic{
@@ -183,4 +184,9 @@ font-size: 30px;
 
 .slider .slider-items .item.active{
 	display: block;
+}
+
+
+#foot{
+    margin-top: 30px;
 }
