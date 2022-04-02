@@ -1,0 +1,359 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap');
+  
+  
+  *:focus{
+    outline: none;
+  }
+  body{
+    position: relative;
+    background: #f0f0f0;
+    font-family: 'roboto',sans-serif;
+  }
+  .navbar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    padding: 0 2.5vw;
+  }
+  
+  .logo{
+    padding-top: 0;
+    height: 60px;
+  
+  
+  }
+  .search-box{
+    position: relative;
+     width: 60%;
+    height: 35px;
+    display: flex;
+    padding-left: 1%;
+  }
+  
+  .search-bar{
+    width: 500%;
+    height: 100%;
+    border: 2px solid #dbdbdb;
+    padding: 0 20px;
+    font-size: 16px;
+    text-transform: capitalize;
+  
+  }
+  .search-btn{
+    width: 50%;
+    height: 100%;
+    background:red;
+    border: 2px solid #dbdbdb;
+    padding: 5px 0;
+  }
+  .user-options{
+        height: 35px;
+        display: flex;
+        margin-left: auto;
+      padding-right: 0px;
+      width: 18%;
+      gap: 10px;
+      padding-bottom: 5%;
+  }
+    .deal5{
+      padding-top: 30px;
+      padding-left: 500px;
+      padding-bottom: 20px;
+    }
+    .tag{
+      display: flex;
+      height: 300px;
+      width: 300px;
+      padding-left: 20px;
+      gap: 20px;
+      text-align: center;
+    }
+   .png{
+     padding-top: 20%;
+   }
+    .user-options.icon{
+      height: 80%;
+      justify-items: center;
+      cursor: pointer;
+      gap: 30px;
+    }
+    .vivo{
+      text-align: left;
+      background: #dbdbdb;
+    }
+  
+     .text {
+      display: flex;
+      margin: auto;
+      gap: 30px;
+    margin-top: 0;
+    padding-top: 80px;
+    margin-left: 30px;
+  color: #888;
+  text-decoration: none;
+  padding-bottom: 10px;
+    }
+    .a{
+      text-decoration: none;
+    }
+    .text a:hover {
+      text-decoration: underline;
+      
+    }
+  /* .text a{
+    text-decoration: none;
+  
+  } */
+  
+    .im{
+   background-image: "https://ak1.ostkcdn.com/img/mxc/03212022-HP-A1-INTL-1400x550.jpg";
+     
+    }
+  .deals{
+    color: black;
+    text-align: center;
+    padding-top: 5px;
+    background-color: #fff;
+  }
+  .img2 {
+    display: flex;
+     padding-top: 10px;
+     padding-bottom: 10px;
+      gap: 10px;
+      padding-left: 10px;  
+  }
+  .abc{
+    text-align: center;
+    
+  }
+  
+  .ig{
+    padding-top: 50px;
+    padding-left: 30px;
+  }
+  .deal2{
+    padding-top: 10px;
+    text-align: center;
+   background-color: #fff;
+  }
+  .img3  {
+    display: flex;
+    padding-top: 10px;
+     height: 250px;
+     width: 250px;
+     gap: 10px;
+     padding-left: 0;
+     background-color: #f0f0f0;
+     padding-bottom: 20px; 
+     text-align: center;
+  }
+  
+  
+    .img4{
+      display: flex;
+      padding-top: 60px;
+       height: 270px;
+       width: 270px;
+       gap: 10px;
+       padding-left: 20px;
+       background-color: #f0f0f0;
+    }
+    .slider{
+      display: flex;
+      padding-top: 30px;
+     padding-bottom: 50px;
+      gap: 20px;
+      height: 200px;
+      width: 200px;
+      background-color: #f0f0f0; 
+      padding-left: 30px;
+    }
+   
+    .deal3{
+      padding-top: 20px;
+      text-align: center;
+     
+    }
+    .img-box img{
+      width: 100%;
+      text-align: center;
+      padding: 400px;
+    }
+    .btn{
+      border: none;
+      outline: none;
+      background: #888;
+      padding: 10px 30px;
+      font-size: 20px;
+      color: #ddd;
+      cursor: pointer;
+      margin: 10px auto;
+      justify-items: center;
+    }
+     .imgtext{
+      display: flex;
+      margin-left: 90px;
+      gap: 220px;
+    } 
+    .p{
+      display: flex;
+      text-align: center;
+      margin-left: 30px;
+      gap: 60px;
+      
+    }
+   .png1{
+     padding-top: 30px;
+     padding-left: 10px;
+   }
+   .title{
+    padding-top: 20px;
+    text-align: center;
+    padding-bottom: 20px;
+  
+  }
+  .over{
+    display: flex;
+    height: 400px;
+    width: 400px;
+    gap: 20px;
+    padding-left: 30px;
+  }
+  .des{
+    padding-left: 40px;
+    display: flex;
+    gap: 250px;
+  }
+  .d1{
+    display: flex;
+    padding-left: 35px;
+  }
+  /* .button{
+    background-color: rgb(255, 255, 255);
+  } */
+  
+  #btn{
+    margin-top: 30px;
+    width: 130px;
+    height: 40px;
+    color: white;
+    background-color: black;
+    border-radius: 3px;
+    border-color: transparent;
+    font-size: 15px;
+    font-weight: 550;
+    justify-content: center;
+  margin-left: 600px;
+   
+  }
+  .h1{
+    padding-top: 20px;
+    text-align: center;
+    padding-bottom: 20px;
+  }
+  .srch{
+    display: flex;
+  }
+  .table {
+    border-collapse: collapse;
+    width: 500px;
+   
+  }
+  
+  td, th {
+    width: 400px;
+    height: 0;
+    border: none;
+    text-align: center;
+    padding: 20px;
+    margin-left: 30px;
+    background-color: #fff;
+    border-radius: 5px;
+  
+  }
+  .hove:hover{
+    background: rgb(236, 231, 231);
+  }
+  body{
+              
+    margin: 0;
+    background: #f2f2f2;
+  }
+  .nav{
+    margin-top: 80px;
+    display: flex;
+    width: 100%;
+    background:#fff;
+     height: 50px; 
+  }
+  ul{
+    
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+  }
+  ul li{
+    
+    float: left;
+    margin-top: 5px;
+  }
+  ul li a{
+    /* width: 50%;
+    color:black;
+    display: block;
+    text-decoration: none;
+    font-size: 20px;
+    padding: 10px;
+    border-radius: 10px;
+    
+    font-weight: bold;
+    margin-left: 5px; */
+    width: 50%;
+    color:rgb(95, 93, 93);
+    display: block;
+    text-decoration: none;
+    font-size: 15px;
+    padding: 15px;
+    font-family: Helvetica ,Helvetica,Arial,sans-serif;
+    margin-left: 5px;
+  
+  }
+  a:hover{
+    text-decoration: underline;
+  }
+  ul li ul{
+    background: white;
+  }
+  ul li ul li ul {
+    float: none;
+  
+  }
+  ul li ul{
+    display: none;
+  }
+  ul li:hover ul{
+    display: flex;
+    flex-direction: column;
+  } 
+  
+  .im{
+    display: flex;
+    padding-left: 10px;
+  }
+  /* .vivo{
+    height: 250px;
+    width: 250px;
+    padding-left: 10px;
+    gap: 60px;
+  } */
