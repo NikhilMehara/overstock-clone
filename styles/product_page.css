@@ -640,7 +640,7 @@ th {
 
 #custreviews {
   width: 990px;
-  height: 1056px;
+  height: 350px;
   margin-left: 155px;
   display: flex;
   flex-direction: column;
@@ -740,4 +740,9 @@ p {
   height: 16px;
   width: 16px;
   object-fit: contain;
+}
+
+
+#footer p{
+  color: white;
 }

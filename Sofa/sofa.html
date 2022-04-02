@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sofa & Recliners</title>
     <link rel="stylesheet" href="/styles/sofa.css">   
+    <link rel="stylesheet" href="/styles/footer.css">
     
 </head>
 <body>
@@ -185,11 +186,11 @@ const appenddata=(main)=>{
 
              innerdiv.addEventListener("click",()=>{
                
-                let dataarray=[];
+                // let dataarray=[];
 
-                dataarray.push(e);
+                // dataarray.push(e);
 
-                localStorage.setItem("product",JSON.stringify(dataarray))
+                localStorage.setItem("product",JSON.stringify(e))
 
                 window.location.href="/rohit/product_page.html"
 
@@ -361,6 +362,17 @@ thirdShow(secData)
     }
 
 
+
+
+
+</script>
+
+
+<script type="module">
+
+    import footer from "/components/footer.js"
+
+    document.getElementById("footer").innerHTML=footer();
 </script>
 
 

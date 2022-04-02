@@ -89,7 +89,7 @@ console.log(data);
      let rat = document.createElement('h2')
      rat.setAttribute("id", "rat")
 
-     rat.innerHTML = `${ratingstars()} <img id="downarrow" src="https://cdn-icons-png.flaticon.com/512/60/60995.png"/>  <span id="rat-span"> ${data.rating} Reviews</span>`
+     rat.innerHTML = ` <span id="rat-span"> ${data.rating} Reviews</span>`
     
      let pri = document.createElement('div')
      pri.setAttribute("id","pri")

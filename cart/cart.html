@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cart</title>
+    <link rel="stylesheet" href="/styles/footer.css">
     <style>
 #main{
     display: flex;
@@ -99,6 +100,10 @@ margin: auto;
 #info{
     justify-content: space-evenly;
 }
+
+#footer{
+    margin-top: 30px;
+}
     </style>
 </head>
 <body>
@@ -107,7 +112,7 @@ margin: auto;
         <div id="totalDiv">
             <div >
 <!------------------------------------- All billing  ------------------------------------------------------->
-                <h4>(</h4>  <h4 id="qty">0</h4>  <h4>)</h4>  <h4>Items &nbsp -  &nbsp ₹ &nbsp;</h4>
+                <h4>(</h4>  <h4 id="qty"></h4>  <h4>)</h4>  <h4>Items &nbsp -  &nbsp ₹ &nbsp;</h4>
                 <h4 id="total">₹</h4>
             </div>
             <div>
@@ -133,9 +138,14 @@ margin: auto;
             </div>
         </div>
     </div>
+
+    <div id="footer"></div>
 </body>
 </html>
 <script>
+
+
+let q=JSON.parse(localStorage.getItem("quantity"))
     //---------------------------------sample data-------------------------
     // let arr =[{
     //     name : "Futzca Modern L-shaped Compact Convertible Sectional Sofa w/ Reversible Chaise",
@@ -160,10 +170,12 @@ margin: auto;
     // }]
     // localStorage.setItem(("cartItem"),JSON.stringify(arr))
     let data= JSON.parse(localStorage.getItem("cartitems"))
-    console.log(data);
+    let array=[];
+    array.push(data)
+    console.log(array);
             // A.Creation B.Giving contents C. Appending D.Appending
     function showData(){
-        data.map(function(elem,index){
+        array.map(function(elem,index){
             let imgdiv = document.createElement("div")
             //imgdiv.setAttribute("id","imgDiv")
             let infodiv = document.createElement("div")
@@ -173,14 +185,12 @@ margin: auto;
             let remove= document.createElement("button")
             remove.innerText="Remove"
             remove.setAttribute("id","remove")
-            remove.addEventListener("click",function()
+            remove.addEventListener("click",function(elem,index)
             {
-               remove1(elem,index)
-            //    data.splice(ind,1)
-            //    console.log(data)
-            //    localStorage.setItem("cartItem", JSON.stringify(data))
-            //    showData()
-               //localStorage.removeItem("cartItem",elem)
+            //    remove1(elem,index)
+            array.splice(index,1)
+            localStorage.removeItem("cartItem")
+            
             })
             let save = document.createElement("button")
             save.innerText="Save"
@@ -200,17 +210,28 @@ margin: auto;
             var qty = document.createElement("p")
             qty.innerText = "Quantity:"
             var div=document.createElement("div")
-            var p1=document.createElement("div")
+            var p1=document.createElement("button")
             p1.innerText="+"
+
+        
             // Addinfg event to get sum --------------------------------------------------------------------
             p1.addEventListener("click",function(){
-            sumofquntity(i);
+            
+                
+              q++;
+              document.querySelector("#qty").innerText = q;
+            
             })
-            var p3=document.createElement("div")
+            var p3=document.createElement("button")
             p3.innerText="-"
             // Addinfg event to get sum -----------------------------------------------------------------------------
             p3.addEventListener("click",function(){
-            subofquntity(i);
+                
+            
+            q--
+            document.querySelector("#qty").innerText = q;
+
+           
             })
             //imgdiv.append(i)
             div.append(p1,qty,p3)
@@ -222,28 +243,29 @@ margin: auto;
     }
              //---------------------------Item count++----------------------
              function sumofquntity(i){
-            data[i].quntity++;
+            q++;
             localStorage.setItem("cartItem",JSON.stringify(data))
             showData(data)
             Total()
             }
             //---------------------------Item count(- ve)----------------
              function subofquntity(i){
-            data[i].quntity--;
-            localStorage.setItem("cartItem",JSON.stringify(data))
+            q--;
+            localStorage.setItem("cartItem",JSON.stringify(array))
             Total()
             }
             //--------------------Finding Total Price------------------------------------
             function Total(){
-                var total = data.reduce(function(acc,el){
-                return acc+el.price
+                var total = array.reduce(function(acc,el){
+                return el.price*q
                 },0)
              document.querySelector("#total").innerText = total;
             }
             Total()
             //----------------Items count---------------------------------------------
             function quantity(){
-             document.querySelector("#qty").innerText = data.length;
+             document.querySelector("#qty").innerText = q;
+             
             }
              // RAVTJ20 disocunt logic--------------------------------------------------------------------
             // Apply button submit and done --------------------------------------------------------
@@ -253,7 +275,8 @@ margin: auto;
             var promo = document.getElementById("promo").value
             var discount =0
             if(promo=="RAV20"){
-                 discount=Number(total)*0.2
+                discount=Number(total)*0.2
+                discount=Math.trunc(discount)
                 document.getElementById("total_savings").innerText = Number(discount);
                 document.getElementById("total_price").innerText = Number(total)-Number(discount);
                 document.getElementById("subtotal").innerText = Number(total)-Number(discount);
@@ -264,7 +287,7 @@ margin: auto;
             }
             })
             // Fina price to pay after  all discounts--------------------------------------------
-             quantity(data)
+             quantity()
              function finalprice(){
                  var total = document.getElementById("total").innerText
                  var promo = document.getElementById("promo").value
@@ -283,7 +306,7 @@ margin: auto;
                console.log("hi")
             }
             finalprice()
-            showData()
+            showData(array)
 //  function remove1(elem,index){
 // data.splice(index,1)
 // console.log(data)
@@ -291,4 +314,31 @@ margin: auto;
 // showData()
 // Total()
 // }
+
+
+// function remove1(elem,index){
+//        array.splice(index,1)
+             
+//                showData(array)
+//                console.log(array)
+//                localStorage.setItem("cartItems", JSON.stringify(array))
+//             showData(array)
+          
+//             //    localStorage.removeItem("cartItem")
+//             // location.reload(true)
+                 
+
+
+// }
+
+
+console.log(q)
 </script>
+
+<script type="module">
+
+    import footer from "/components/footer.js"
+    
+    document.getElementById("footer").innerHTML=footer();
+    
+    </script>
