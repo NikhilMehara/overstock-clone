@@ -5,6 +5,10 @@
     display: flex;
 }
 
+#container{
+   margin-top: 50px;
+}
+
 #righttop{
     background-image: url(//ak1.ostkcdn.com/img/mxc/09142020_FALLEGREEN_057z_SofasandCouches_AMOD.jpg?imwidth=900&impolicy=custom);
     width: 90%;
@@ -157,6 +161,7 @@ option{
    width: 240px;
    cursor: pointer;
    font-size: 20px;
+  
 }
 
 
@@ -212,11 +217,15 @@ option{
    width: 240px;
    cursor: pointer;
    font-size: 20px;
+   
 }
 
 #decorDivInner>img{
    width: 100%;
 }
+/* #decorDivInner{
+   padding-top: 20px;
+} */
 
 #bypopular{
    display: flex;

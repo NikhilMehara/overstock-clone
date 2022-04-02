@@ -7,9 +7,11 @@
     <title>Sofa & Recliners</title>
     <link rel="stylesheet" href="/styles/sofa.css">   
     <link rel="stylesheet" href="/styles/footer.css">
+    <link rel="stylesheet" href="/styles/navbar.css">
     
 </head>
 <body>
+    <div id="nav"></div>
     <div id="container"></div>
     <div id="top">
         <div id="topLeft">
@@ -373,6 +375,10 @@ thirdShow(secData)
     import footer from "/components/footer.js"
 
     document.getElementById("footer").innerHTML=footer();
+
+    import navbar from "/components/navbar.js"
+
+document.getElementById("nav").innerHTML=navbar();
 </script>
 
 

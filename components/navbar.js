@@ -150,6 +150,7 @@ var navbar = () =>{
 </nav>`
 }
 
+export default navbar
 
 
 var navbar_data = () => {

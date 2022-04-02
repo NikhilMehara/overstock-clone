@@ -1,0 +1,10 @@
+
+
+
+
+    import navbar from "/components/navbar.js"
+
+    document.getElementById("nav").innerHTML=navbar();
+
+
+    <link rel="stylesheet" href="/styles/homepage.css">
