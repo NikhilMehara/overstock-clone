@@ -342,18 +342,18 @@ function addToCartFun(data){
 
 
 
-    qty=JSON.parse(localStorage.getItem("quantity"))||1;
+    // qty=JSON.parse(localStorage.getItem("quantity"))||1;
 
-    // let quantity = document.getElementById("selecttag")
-    // quantity.addEventListener("change", function(){
+ 
         
-    qty = quantity.value;
-    localStorage.setItem("quantity",JSON.stringify(qty))
+    // qty = quantity.value;
+    // localStorage.setItem("quantity",JSON.stringify(qty))
 
         
-    // })
+    
     console.log(data)
     localStorage.setItem("cartitems",JSON.stringify(data))
+    console.log(data)
     // window.location.href="/cart/cart.html"
 }
 

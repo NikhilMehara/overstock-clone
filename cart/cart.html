@@ -176,6 +176,7 @@ let q=JSON.parse(localStorage.getItem("quantity")) || 1;
     // }]
     // localStorage.setItem(("cartItem"),JSON.stringify(arr))
     let data= JSON.parse(localStorage.getItem("cartitems"))
+    console.log(data)
     let array=[];
     array.push(data)
     console.log(array);
@@ -213,6 +214,7 @@ let q=JSON.parse(localStorage.getItem("quantity")) || 1;
             let i = document.createElement("img")
             i.setAttribute("id","image1")
             i.src=elem.imgSrc
+            
             var qty = document.createElement("p")
             qty.innerText = "Quantity:"+q;
             qty.setAttribute("id","qtyid")
@@ -367,5 +369,3 @@ console.log(q)
 document.getElementById("nav").innerHTML=navbarzone();
     
     </script>
-
-    <script src="/scripts/product_page.js"></script>
