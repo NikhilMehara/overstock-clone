@@ -223,11 +223,13 @@ option{
 #decorDivInner>img{
    width: 100%;
 }
-/* #decorDivInner{
-   padding-top: 20px;
-} */
+
 
 #bypopular{
    display: flex;
    justify-content: space-around;
+}
+
+#footer{
+   margin-top: 30px;
 }

@@ -63,7 +63,7 @@ let furnituredata=[
         "imgSrc" : "https://ak1.ostkcdn.com/images/products/is/images/direct/7b8a5d69328083a6e50612f4605f047a9884296c/Velvet-Tufted-Accent-Sofa-Modern-Sofa-Bed.jpg?imwidth=480&impolicy=medium"
     },
     {
-        "name" : "W Linen Fabric Modern Convertible Sofa Bed with Removable Armrests",
+        "name" : "Linen Fabric Modern Convertible Sofa Bed with Removable Armrests",
         "category" : "Sofa",
         "price" : "60099",
         "rating": "⭐ 4",
@@ -133,7 +133,7 @@ let furnituredata=[
         "imgSrc" : "https://ak1.ostkcdn.com/images/products/is/images/direct/7753aa3ca9a29009073447e283aca14e01e9a9fd/Daybed-with-Trundle-Upholstered-Tufted-Sofa-Bed%2C-with-Button-and-Copper-Nail-on-Arms%EF%BC%8Cboth-Twin-Size%2C-PU-Black.jpg?imwidth=480&impolicy=medium"
     },
     {
-        "name" : "Morden Style Sofa Set Couch Furniture Upholstered Armchair, Loveseat and Three Seat Sofa for Home or Office (1+2+3-Seat)",
+        "name" : "Morden Style Sofa Set Couch Furniture Upholstered Armchair, Loveseat and Three Seat Sofa ",
         "category" : "Sofa",
         "price" : "288099",
         "rating": "⭐⭐⭐⭐ 445",

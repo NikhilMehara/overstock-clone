@@ -58,10 +58,10 @@
             <br>
             <select name="" id="filterPrice" onchange="filter()">
                 <option value="">Price</option>
-                <option value="180000">180000-220000</option>
-                <option value="80001">80000-180000</option>
-                <option value="60001">60000-80000</option>
-                <option value="20000">20000-60000</option>
+                <option value="220000">Less Then 220000</option>
+                <option value="80000">Less Then 180000</option>
+                <option value="60000">Less Then 60000</option>
+                <option value="20000">Less Then 20000</option>
                 
                
               
@@ -188,9 +188,7 @@ const appenddata=(main)=>{
 
              innerdiv.addEventListener("click",()=>{
                
-                // let dataarray=[];
-
-                // dataarray.push(e);
+               
 
                 localStorage.setItem("product",JSON.stringify(e))
 
@@ -287,6 +285,52 @@ secondShow(secData)
 
 //for third data
 
+let thirdData=[
+    {
+        "name" : "Futzca Modern L-shaped Compact Convertible Sectional Sofa w/ Reversible Chaise",
+        "category" : "Modern & COntemporary Sofas",
+        "price" : "41500",
+        "rating": "4",
+        "imgSrc" : "https://ak1.ostkcdn.com/img/mxc/02152018_SofasCouches_ModernSofa.jpg?imWidth=320&impolicy=medium"
+    },
+    {
+        "name" : "Rosevera Bjorn Chesterfield Settee",
+        "category" : "Glam Sofa",
+        "price" : "31000",
+        "rating": "5",
+        "imgSrc" : "https://ak1.ostkcdn.com/images/products/26411394/Glam-Royal-Blue-Velvet-Fabric-Upholstered-Sofa-a045645c-4aa6-4d9e-93c1-3af61c558765.jpg?imWidth=320&impolicy=medium"
+    },
+    {
+        "name" : "Morden Style Sofa Set Couch Furniture Upholstered Armchair, Loveseat and Three Seat Sofa for Home or Office (1+2+3-Seat)",
+        "category" : "Transitional Sofa",
+        "price" : "288099",
+        "rating": "4",
+        "imgSrc" : "https://ak1.ostkcdn.com/images/products/3911915/Uptown-Modern-Sofa-by-iNSPIRE-Q-Classic-c4f96a87-5699-44e1-9370-8e5cbeb7d384_600.jpg?imWidth=320&impolicy=medium"
+    },
+    {
+        "name" : "90 L L-Shaped Reversible Pull out Sleeper,Sectional Storage Sofa Bed",
+        "category" : "Mid-Century Modern Sofa",
+        "price" : "170050",
+        "rating": "5",
+        "imgSrc" : "https://ak1.ostkcdn.com/img/mxc/02152018_SofasCouches_Mid-CenturySofas.jpg?imWidth=320&impolicy=medium"
+    },
+    {
+        "name" : "90 L L-Shaped Reversible Pull out Sleeper,Sectional Storage Sofa Bed",
+        "category" : "Leather Sofa",
+        "price" : "170050",
+        "rating": "5",
+        "imgSrc" : "https://ak1.ostkcdn.com/images/products/22799314/Abbyson-Woodstock-Camel-Mid-Century-Top-Grain-Leather-Sofa-5b30abad-ff1b-4430-89ef-8f867bd7abea.jpg?imWidth=320&impolicy=medium"
+    },
+    {
+        "name" : "90 L L-Shaped Reversible Pull out Sleeper,Sectional Storage Sofa Bed",
+        "category" : "Velvet Sofa",
+        "price" : "170050",
+        "rating": "5",
+        "imgSrc" : "https://ak1.ostkcdn.com/images/products/19755850/Corvus-Prato-Velvet-Chesterfield-Sofa-with-Rolled-Arms-f30b8e2d-5902-4c39-a327-1542eac410ab.jpg?imWidth=320&impolicy=medium"
+    },
+]
+
+
 const thirdShow=(data)=>{
 
 data.forEach((e)=>{
@@ -307,7 +351,7 @@ data.forEach((e)=>{
 
 }
 
-thirdShow(secData)
+thirdShow(thirdData)
     
 
     function sortby()
@@ -333,15 +377,15 @@ thirdShow(secData)
             console.log(main)
             appenddata(main);
         }
-       if(sorting==="rating")
-        {
-            main.sort((a,b)=>{
-              return a.rating-b.rating;
-            })
-            console.log(main)
+    //    if(sorting==="rating")
+    //     {
+    //         main.sort((a,b)=>{
+    //           return a.rating-b.rating;
+    //         })
+    //         console.log(main)
 
-            appenddata(main)
-        }
+    //         appenddata(main)
+    //     }
     }
 
 
@@ -356,7 +400,7 @@ thirdShow(secData)
         let filterData=main.filter((e)=>{
 
             
-            return e.price>Number(num);
+            return e.price<Number(num);
         })
 
         appenddata(filterData)

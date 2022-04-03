@@ -211,28 +211,43 @@ let q=JSON.parse(localStorage.getItem("quantity"))
             i.setAttribute("id","image1")
             i.src=elem.imgSrc
             var qty = document.createElement("p")
-            qty.innerText = "Quantity:"
+            qty.innerText = "Quantity:"+q;
+            qty.setAttribute("id","qtyid")
             var div=document.createElement("div")
             var p1=document.createElement("button")
-            p1.innerText="+"
+            p1.innerText="Add"
 
         
             // Addinfg event to get sum --------------------------------------------------------------------
-            p1.addEventListener("click",function(){
-            
-                
+
+            let total;
+
+            p1.addEventListener("click",function(){   
               q++;
               document.querySelector("#qty").innerText = q;
+             document.querySelector("#qtyid").innerText="Quantity:"+q;
+             total=elem.price*q
+
+             document.querySelector("#total").innerText = total;
+             document.querySelector("#total_price").innerText=total;
+
             
             })
             var p3=document.createElement("button")
-            p3.innerText="-"
+            p3.innerText="Reduce"
             // Addinfg event to get sum -----------------------------------------------------------------------------
             p3.addEventListener("click",function(){
                 
             
             q--
             document.querySelector("#qty").innerText = q;
+            document.querySelector("#qtyid").innerText="Quantity:"+q;
+
+            total=elem.price*q
+
+             document.querySelector("#total").innerText = total;
+
+             document.querySelector("#total_price").innerText=total;
 
            
             })
