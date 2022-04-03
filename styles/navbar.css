@@ -126,3 +126,8 @@ body{
   flex-direction: column;
 }   
       
+
+#id003>a{
+  text-decoration: none;
+  color: black;
+}

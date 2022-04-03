@@ -1,10 +1,10 @@
 const navbarzone = ()=>{
     return `<nav>
         <div class="navbar">
-            <div class="logo">
-                <img src="https://logos-download.com/wp-content/uploads/2017/01/Overstock_logo.png" class="logo" alt="">
-    
-            </div>
+           <a href="../index.html"> <div class="logo">
+           <img src="https://logos-download.com/wp-content/uploads/2017/01/Overstock_logo.png" class="logo" alt="">
+          </div>
+            </a>
             <!-- logo-->
             <!--Search-->
             <div class="search-box">
@@ -17,7 +17,7 @@ const navbarzone = ()=>{
                 <figure id="id001">
                     <img src="https://cdn-icons-png.flaticon.com/512/747/747376.png" width="30px" height="30px" class="icon"
                         alt="">
-                    <figcaption>Acount</figcaption>
+                    <figcaption>Account</figcaption>
                 </figure>
                 <figure id="id002">
                     <img src="https://cdn-icons-png.flaticon.com/512/860/860808.png" width="30px" height="30px" class="icon"

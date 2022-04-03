@@ -453,3 +453,8 @@
   height: 250px;
 }
   
+#id001>a{
+  text-decoration: none;
+  color: black;
+}
+

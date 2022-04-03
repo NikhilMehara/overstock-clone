@@ -310,7 +310,7 @@ console.log(data);
     // let custdiv3 = document.createElement('div')
 
 
-
+    var qty=1;
 
 
 
@@ -319,9 +319,10 @@ console.log(data);
     let quantity = document.getElementById("selecttag")
     quantity.addEventListener("change", function(){
         
-        let qty = quantity.value
+    qty = quantity.value;
+    localStorage.setItem("quantity",JSON.stringify(qty))
 
-        localStorage.setItem("quantity",JSON.stringify(qty))
+        
     })
 
     
@@ -338,6 +339,19 @@ function clickToFav(data)
 }
 
 function addToCartFun(data){
+
+
+
+    qty=JSON.parse(localStorage.getItem("quantity"))||1;
+
+    // let quantity = document.getElementById("selecttag")
+    // quantity.addEventListener("change", function(){
+        
+    qty = quantity.value;
+    localStorage.setItem("quantity",JSON.stringify(qty))
+
+        
+    // })
     console.log(data)
     localStorage.setItem("cartitems",JSON.stringify(data))
     // window.location.href="/cart/cart.html"
