@@ -89,10 +89,11 @@ body{
   
 }
 .navultag li{
+
   list-style-type: none;
   float: left;
   margin-top: 5px;
-  padding-left: 20px;
+  padding-left: 15px;
 }
 
 .navultag li a{
