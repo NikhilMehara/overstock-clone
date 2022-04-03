@@ -318,6 +318,7 @@ console.log(data);
 
     let quantity = document.getElementById("selecttag")
     quantity.addEventListener("change", function(){
+        
         let qty = quantity.value
 
         localStorage.setItem("quantity",JSON.stringify(qty))
