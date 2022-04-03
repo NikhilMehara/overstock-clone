@@ -17,7 +17,7 @@ const submitOTP = () => {
     let otp = document.getElementById('otp_num').value ;
     if(otp==5555 || otp==0000){
         alert("Payment was successful") ;
-        window.location.href = "./punam/homepage.html" ;
+        window.location.href = "../index.html" ;
     }
     else{
         alert("Wrong OTP , Enter again") ;
