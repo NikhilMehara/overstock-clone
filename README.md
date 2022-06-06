@@ -21,32 +21,32 @@ Responsibilities and Listing of important features :
 Every team member was given a specific set of tasks to be completed by the end of the day. We started by listing the pages that we will cover and presenting them. Each one of us was assigned at least two pages to cover from the website. As we didn’t have any APIs for this project we had to create our database. So for the first two days, we were collecting the data and kept adding it to our database. Once the database was done then we started working on the front-end. Our first goal was to create a basic version of the page so that we can get the basic idea and implement them.
 Following are page snippets of our application :
 Home Page :
-<p text-align:"center"><img src = "https://miro.medium.com/max/700/1*hUxC33AbnRnmMQYWkvtPMg.png"/></p>
-<p text-align:"center"> <img src = "https://miro.medium.com/max/700/1*eA4A1iqLCXD2A71WJGIYhw.png"/></p>
-<p text-align:"center"><img src = "https://miro.medium.com/max/700/1*RKreDiMvB8tzn6nRiAfm1Q.png"/></p>
+<p align="center"><img src = "https://miro.medium.com/max/700/1*hUxC33AbnRnmMQYWkvtPMg.png"/></p>
+<p align="center"> <img src = "https://miro.medium.com/max/700/1*eA4A1iqLCXD2A71WJGIYhw.png"/></p>
+<p align="center"><img src = "https://miro.medium.com/max/700/1*RKreDiMvB8tzn6nRiAfm1Q.png"/></p>
 
 2. Ideas Page:
-<p text-align:"center"><img src = "https://miro.medium.com/max/700/1*d-XrbBLOPIzn-ypCVdYpTg.png"/></p>
-<p text-align:"center"><img src = "https://miro.medium.com/max/700/1*DPX6NnoKdgobr3HrIiqEXg.png"/></p>
+<p align="center"><img src = "https://miro.medium.com/max/700/1*d-XrbBLOPIzn-ypCVdYpTg.png"/></p>
+<p align="center"><img src = "https://miro.medium.com/max/700/1*DPX6NnoKdgobr3HrIiqEXg.png"/></p>
 
 3. Login & Sign Up Page :
-<p text-align:"center"><img src = "https://miro.medium.com/max/700/1*3Fy-lwC3WtHHNTU9-i7LGA.png"/></p>
+<p align="center"><img src = "https://miro.medium.com/max/700/1*3Fy-lwC3WtHHNTU9-i7LGA.png"/></p>
 
 4. Furniture & Home Decor Page :
-<p text-align:"center"><img src = "https://miro.medium.com/max/700/1*RXwHIPL9sP8dippZu7ZiNQ.png"/></p>
-<p text-align:"center"><img src = "https://miro.medium.com/max/700/1*RPL5z_IrtGJ2TgzPMLiirw.png"/></p>
-<p text-align:"center"><img src = "https://miro.medium.com/max/700/1*qC2lIJXWtCtJUVyPJnGePA.png"/></p>
+<p align="center"><img src = "https://miro.medium.com/max/700/1*RXwHIPL9sP8dippZu7ZiNQ.png"/></p>
+<p align="center"><img src = "https://miro.medium.com/max/700/1*RPL5z_IrtGJ2TgzPMLiirw.png"/></p>
+<p align="center"><img src = "https://miro.medium.com/max/700/1*qC2lIJXWtCtJUVyPJnGePA.png"/></p>
 
 5. Product Page :
-<p text-align:"center"><img src = "https://miro.medium.com/max/700/1*svdEWd44gcewabMq5sJvDQ.png"/></p>
+<p align="center"><img src = "https://miro.medium.com/max/700/1*svdEWd44gcewabMq5sJvDQ.png"/></p>
 
 6. Cart Page :
-<p text-align:"center"><img src = "https://user-images.githubusercontent.com/99207276/161436918-8a0df10b-92f9-4cfe-8455-54f30385a2b9.png"/></p>
+<p align="center"><img src = "https://user-images.githubusercontent.com/99207276/161436918-8a0df10b-92f9-4cfe-8455-54f30385a2b9.png"/></p>
 
 7. Checkout & OTP Validation Pages :
-<p text-align:"center"><img src = "https://miro.medium.com/max/700/1*Q2upnoeCz4WPb8uP9p6t5g.png"/></p>
-<p text-align:"center"><img src = "https://miro.medium.com/max/700/1*oVpLaetGHD6BzSddx4CcaQ.png"/></p>
-<p text-align:"center"><img src = "https://miro.medium.com/max/700/1*x8aQFwrocNUAHSpHhPHHSw.png"/></p>
+<p align="center"><img src = "https://miro.medium.com/max/700/1*Q2upnoeCz4WPb8uP9p6t5g.png"/></p>
+<p align="center"><img src = "https://miro.medium.com/max/700/1*oVpLaetGHD6BzSddx4CcaQ.png"/></p>
+<p align="center"><img src = "https://miro.medium.com/max/700/1*x8aQFwrocNUAHSpHhPHHSw.png"/></p>
 
 
 Issues faced during the build week :
